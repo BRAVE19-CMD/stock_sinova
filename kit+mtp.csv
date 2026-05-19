@@ -1,0 +1,305 @@
+﻿Désignation;Référence;code article;UM;Stock initial;Réceptions;Production;Stock Final;SHORTAGE
+AUTREMP;CYCLOPENTANE;C5H10-95%;KG; 8 288 ;0;2500;5788;  -  
+AUTREMP;POLYOL RST5345;0204-007087;KG; 22 000 ;0;4000;18000;  -  
+AUTREMP;ISOCYANATE (MDI);DA02-00087A;KG; 20 000 ;0;2500;17500;  -  
+AUTREMP;COATING-ECO PRO;MP03-00001;PCS; - ; - ; - ; - ;  -  
+AUTREMP;MAGNET ;MP03-00004;ML; 137 700 ; - ; - ; 137 700 ;  -  
+AUTREMP;SPONGE;MP03-00003;PCS; 297 000 ; - ; - ; 297 000 ;  -  
+AUTREMP;TUBE  PVC;MP03-00002;ML; 78 300 ; - ; - ; 78 300 ;  -  
+AUTREMP;HOTE PIPE;MP03-00006;ML; 12 681 ; - ; - ; 12 681 ;  -  
+AUTREMP;SOLDER CREAM;;KG; - ; - ; - ; - ;  -  
+EMBALLAGEREF;CARD-WARRANTY;6801-002202;PCS; 2 134 ; - ; 1 800 ; 334 ;  -  
+EMBALLAGEREF;Label caution;DA68-01797R;PCS; 14 004 ; - ; 1 800 ; 12 204 ;  -  
+EMBALLAGEREF;LABEL ENERGY-RT38K8012WW;DA68-02983R;PCS; 4 758 ; - ; - ; 4 758 ;  -  
+EMBALLAGEREF;LABEL ENERGY-RT38K5532S8;DA68-02983W;PCS; 3 127 ; - ; 1 000 ; 2 127 ;  -  
+EMBALLAGEREF;LABEL ENERGY-RT32K5012S8;DA68-02983Y;PCS; 40 ; - ; - ; 40 ;  -  
+EMBALLAGEREF;USER MANUAL;DA68-03377B;PCS; 1 900 ; - ; 1 000 ; 900 ;  -  
+EMBALLAGEREF;MANUEL REFRIGERATEUR;DA68-03383A;PCS; 3 806 ; - ; 800 ; 3 006 ;  -  
+EMBALLAGEREF;LABEL ENERGY-RT46K6231S8;DA68-04092B;PCS; 1 323 ; - ; 800 ; 523 ;  -  
+EMBALLAGEREF;LABEL ENERGY-RT46K6231WW;DA68-04092C;PCS; 6 948 ; - ; - ; 6 948 ;  -  
+EMBALLAGEREF;PACKING CASE RT38;DA69-01607A;PCS; 4 078 ; - ; 896 ; 3 182 ;  -  
+EMBALLAGEREF;PACKING CASE RT32;DA69-01607C;PCS; 770 ; - ; 1 000 ;-230 ;  -  
+EMBALLAGEREF;PACKING CASE RT46;DA69-01613L;PCS; 1 846 ; - ; 800 ; 1 046 ;  -  
+EMBALLAGEREF;ETIQUETTE REF ARABE 6*6CM;ET03-000002;PCS; 21 703 ; - ; - ; 21 703 ;  -  
+EMBALLAGEREF;LABEL SPEC ;1000 RLX;RLX; 40 000 ; - ; - ; 40 000 ;  -  
+EMBALLAGEREF;LABEL IN;1000 RLX;RLX; 29 000 ; - ; - ; 29 000 ;  -  
+EMBALLAGEREF;LABEL BOX;750 RLX;RLX; 33 750 ; - ; - ; 33 750 ;  -  
+EMBALLAGEREF;REBON 80 MM;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGEREF;REBON 60 MM;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGEREF;REBON 110MM;;PCS; 107 ; - ; - ; 107 ;  -  
+EMBALLAGEREF;LABEL ENERGY-RT38K5532B8;;PCS; 1 000 ; - ; - ; 1 000 ;  -  
+EMBALLAGEREF;FICHE GARANTIE BISMA ;;PCS; 4 000 ; - ; - ; 4 000 ;  -  
+EMBALLAGEREF;SCOTCHE ;;RLX; 59 ; - ; - ; 59 ;  -  
+EMBALLAGETV;ETIQUETTE TV ARABE 6*6 cm;ET01-000001;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;packing film;LT-0006;RLX; 5 975 ; - ; 246 ; 5 729 ;  -  
+EMBALLAGETV;Packing case pyramide hood 60 cm ,SH60-P1X;SM-0009;PCS; 43 ; - ; - ; 43 ;  -  
+EMBALLAGETV;ZESTRON;SM-0010;L; - ; - ; - ; - ;  -  
+EMBALLAGETV;ETIQUETTE RFID UHF ANTI-METAL PET/IP68;SM-0011;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;ETIQUETTE RFID UHF 860-960MHZ 70*30*0,3MM;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Papier Dek;;RLX; - ; - ; - ; - ;  -  
+EMBALLAGETV;Étiquette X Ray;;RLX; - ; - ; - ; - ;  -  
+EMBALLAGETV;ETIQUETTE Ean Code TV 45x15;ET01-000002;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette S/N RAC 30x80;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Ceinture d’emballage (PP BAND) 15 mm;;M; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette plaque Signalétique;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette 57X45mm الوجه الأمامي;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;BOX/TAC-18CHSA/XA73I;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;BOX/TAC-24CHSA/XAF1T;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;BOX/TAC-12CHSA/XA73I;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;BOX/TAC-09CHSA/XA73I;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;BOX/TAC-12CHSA/TPH11;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;FICHE ENERGIE TCL TAC-09CHSA/XA73I;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;FICHE ENERGIE TCL TAC-12CHSA/XA73I;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;FICHE ENERGIE TCL TAC-18CHSA/XA73I;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;FICHE ENERGIE TCL TAC-12CHSA/XAF1T;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;FICHE ENERGIE TCL TAC-18CHSA/XAF1T;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;FICHE ENERGIE TCL TAC-24CHSA/XAF1T;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;FICHE ENERGIE TCL TAC-12CHSA/TPH11;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Testé;ET08-000014;PCS; - ; - ; - ; - ;  -  
+EMBALLAGEWM;BOX MAL SAMSUNG 1405 2853 MARRON;DC69-01760U;PCS; 1 444 ; - ; 175 ; 1 269 ;  -  
+EMBALLAGEWM;BOX MAL SAMSUNG 1192 2737 MARRON;DC69-02711A;PCS; 544 ; 1 690 ; 206 ; 2 028 ;  -  
+EMBALLAGEWM;MANUAL USERS- WW70T4020EE,BS,EN+FR+AR,MOJO,W148,L210,LED;DC68-04221H;PCS; 3 751 ; - ; 171 ; 3 580 ;  -  
+EMBALLAGEWM;MANUAL USERS- WW80TA046AX,BS,EN+FR+AR,MOJO,W148,L210;DC68-04218M;PCS; 2 373 ; - ; 171 ; 2 202 ;  -  
+EMBALLAGEWM;MANUAL USERS- WW10T654DLN,BS,FR+AR,MOJO,W148,L210;DC68-04189U;PCS; 845 ; - ; - ; 845 ;  -  
+EMBALLAGEWM;CARD-WARRANTY wm;6801-002202;PCS; 2 897 ; - ; 17 ; 2 880 ;  -  
+EMBALLAGEWM;FICHE INSTRUCTION;DC68-04219A;PCS; 1 611 ; - ; - ; 1 611 ;  -  
+EMBALLAGEWM;FICHE INSTRUCTION;DC68-01692L;PCS; 1 611 ; - ; - ; 1 611 ;  -  
+EMBALLAGEWM;ETIQUETTE WM ARABE 6*6CM;ET02-000001;PCS; 30 273 ; - ; 2 ; 30 271 ;  -  
+EMBALLAGEWM;BOX MAL SAMSUNG 1192 2737 MARRON;DC69-01081J;PCS; 544 ; 1 690 ; 206 ; 2 028 ;  -  
+EMBALLAGEWM;ETIQUETTE SIGNALITIQUE;ETIQUETTE SIGNALITIQUE;PCS; - ; - ; - ; - ;  -  
+EMBALLAGEWM;ETIQUETTE 45*15 VIERJE PP;ET-4515PP;PCS; 12 000 ; - ; - ; 12 000 ;  -  
+EMBALLAGEWM;MANUEL LAVE-LINGE WA 90T 526;DC68-04073U;PCS; 3 621 ; - ; 176 ; 3 445 ;  -  
+EMBALLAGEWM;MANUEL LAVE-LINGE WA 4000HS;DC68-03414Q;PCS; 3 585 ; - ; - ; 3 585 ;  -  
+EMBALLAGEWM;Film ETIRABLE EN BOBINE;Film ETIRABLE EN BOBINE;RLX; 33 ; - ; 14 ; 19 ;  -  
+EMBALLAGEWM;ETIQUETTE W80 L60;ET-8060;PCS; - ; - ; - ; - ;  -  
+EMBALLAGEWM;ETIQUETTE W65 L155;ET-65155;PCS; 3 000 ; - ; - ; 3 000 ;  -  
+EMBALLAGEWM;ETIQUETTE W50 L20;ET-5020;PCS; 29 000 ; 50 000 ; 5 000 ; 74 000 ;  -  
+EMBALLAGEWM;3M Adhesive Tape(33M/ROLL)this is accessories to tape the glass(Width 10mm*Thickness 1.0mm);LT-0001;PCS; - ; - ; - ; - ;  -  
+EMBALLAGEWM;INSULATION BAG,9.4*18.4cm 绝缘袋;LT-0002;PCS; 26 806 ; - ; 17 ; 26 789 ;  -  
+EMBALLAGEWM;Tape packing;LT-0009;PCS; 38 000 ; - ; - ; 38 000 ;  -  
+EMBALLAGEWM;PP BAND;LT-0008;PCS; 66 000 ; - ; - ; 66 000 ;  -  
+EMBALLAGEWM;manual user ;LT-0003;PCS; 7 066 ; - ; - ; 7 066 ;  -  
+EMBALLAGEWM;packing case;LT-0010;PCS; 450 ; - ; 120 ; 330 ;  -  
+EMBALLAGEWM;INSULATION BAG 14 cm;INSULATION BAG 14 cm;PCS; 4 000 ; - ; - ; 4 000 ;  -  
+EMBALLAGEWM;COLLE NEOCOL;LT-0011;L; 193 ; - ; - ; 193 ;  -  
+EMBALLAGEWM;Packing case OVEN SKY FULL GAZ Mec SF60-G3MVCX;SM-0001;PCS; 256 ; - ; - ; 256 ;  -  
+EMBALLAGEWM;Packing case OVEN SKY GAZ ELEC Mec SF60-M3MVCX;SM-0002;PCS; 476 ; - ; - ; 476 ;  -  
+EMBALLAGEWM;Packing case OVEN SKY ELEC DIGITAL SF60-E2DVCX;SM-0003;PCS; 206 ; - ; - ; 206 ;  -  
+EMBALLAGEWM;Packing case OVEN SKY GAZ ELEC DIGITAL SF60-M2DVCX;SM-0004;PCS; 412 ; - ; - ; 412 ;  -  
+EMBALLAGEWM;Packing case OVEN SKY FULL GAZ DIGITAL SF60-G2DVCX;SM-0005;PCS; 29 ; - ; - ; 29 ;  -  
+EMBALLAGEWM;Packing case HOBS 60 CM , ST60-4BE1X, ST60-4BFS2X, ST60-4BSW4GB, ST60-4BSW3X;SM-0006;PCS; 991 ; - ; - ; 991 ;  -  
+EMBALLAGEWM;Packing case HOBS 70 CM , ST70-5BEW5X;SM-0007;PCS; 112 ; - ; - ; 112 ;  -  
+EMBALLAGEWM;Packing case Decorative hood 60 cm ,SH60-DT2GB;SM-0008;PCS; 13 ; - ; - ; 13 ;  -  
+EMBALLAGEWM;Packing case pyramide hood 60 cm ,SH60-P1X;SM-0009;PCS; 43 ; - ; - ; 43 ;  -  
+EMBALLAGEWM;Packing case T hood 60 cm ,SH60-TT3X;SM-0010;PCS; 68 ; - ; - ; 68 ;  -  
+EMBALLAGEWM;Packing case Decorative hood 90 cm ,SH90-DT4GB;SM-0011;PCS; 10 ; - ; - ; 10 ;  -  
+EMBALLAGEWM;sticker box SH60-P1X;ST-001;PCS; 43 ; - ; - ; 43 ;
+EMBALLAGEWM;sticker box SH60-TT3X;ST-002;PCS; 42 ; - ; - ; 42 ;
+EMBALLAGEWM;sticker box SH60-DT2GB;ST-003;PCS; 38 ; - ; - ; 38 ;
+EMBALLAGEWM;sticker box SH90-DT4GB;ST-004;PCS; 31 ; - ; - ; 31 ;
+EMBALLAGEWM;sticker box ST60-4BE1X;ST-005;PCS; 37 ; - ; - ; 37 ;
+EMBALLAGEWM;sticker box ST60-4BFS2X;ST-006;PCS; 73 ; - ; - ; 73 ;
+EMBALLAGEWM;sticker box ST60-4BSW4GB;ST-007;PCS; 39 ; - ; - ; 39 ;
+EMBALLAGEWM;sticker box ST60-4BSW3X;ST-008;PCS; 90 ; - ; - ; 90 ;
+EMBALLAGEWM;sticker box ST70-5BEW5X;ST-009;PCS; - ; - ; - ; - ;
+EMBALLAGEWM;sticker box ST70-5BFS6X;ST-010;PCS; 54 ; - ; - ; 54 ;
+EMBALLAGEWM;sticker box ST70-5BSW7GB;ST-011;PCS; 55 ; - ; - ; 55 ;
+REF;RT32K5012S8;;PCS; 902 ; - ; 886 ; 16 ; 524 
+REF;RT38K5012WW;;PCS; - ; - ; - ; - ; 436 
+REF;RT38K5532S8;;PCS; 1 000 ; - ; 551 ; 449 ; 1 279 
+REF;RT46K6231WW;;PCS; - ; - ; - ; - ; 187 
+REF;RT46K6231S8;;PCS; 800 ; - ; 797 ; 3 ; 658 
+REF;RT46K6231B8;;PCS; 1 938 ; - ; - ; 1 938 ; 12 
+REFCOMP;RT32K5012S8;;PCS; 902 ; - ; 886 ; 16 ;  -  
+REFCOMP;RT38K5012WW;;PCS; - ; - ; - ; - ;  -  
+REFCOMP;RT38K5532S8;;PCS; 1 000 ; - ; 551 ; 449 ;  -  
+REFCOMP;RT46K6231WW;;PCS; - ; - ; - ; - ;  -  
+REFCOMP;RT46K6231S8;;PCS; 800 ; - ; 797 ; 3 ;  -  
+REFCOMP;RT46K6231B8;;PCS; 1 938 ; - ; - ; 1 938 ;  -  
+RESINE;PP (BJ 7500);;KG; - ; - ; - ; - ;  -  
+RESINE;PP (BI850);;KG; - ; - ; - ; - ;  -  
+RESINE;PP (P-001S);;KG; - ; - ; - ; - ;  -  
+RESINE;PP (BJ750W180);;KG; - ; - ; - ; - ;  -  
+RESINE;GPPS (116-G);;KG; - ; - ; - ; - ;  -  
+RESINE;FC2305 (NATS );;KG; - ; - ; - ; - ;  -  
+RESINE;FC2305 (W154);;KG; - ; - ; - ; - ;  -  
+RESINE;HIPS (XQ83180);;KG; - ; - ; - ; - ;  -  
+RESINE;BSPR (NF-6068r);;KG; - ; - ; - ; - ;  -  
+RESINE;HI-PRENE (HG43NC);;KG; - ; - ; - ; - ;  -  
+RESINE;STAREX ABS (RM-0760);;KG; - ; - ; - ; - ;  -  
+RESINE;FC2305(W229);;KG; - ; - ; - ; - ;  -  
+RESINE;PP HFFR-1510 NT;;KG; - ; - ; - ; - ;  -  
+RESINE;GF-S;;KG; 44 200 ; - ; - ; 44 200 ;  -  
+RESINE;ABS QU-0191 S;;KG; 57 800 ; - ; 10 200 ; 47 600 ;  -  
+RESINE;PVC ;;KG; 12 000 ; - ; - ; 12 000 ;  -  
+RESINE;ABS BLANC;;KG; - ; - ; - ; - ;  -  
+RESINE;ABS NOIRE ;;KG; - ; - ; - ; - ;  -  
+RESINE;pp color white;;KG; - ; - ; - ; - ;  -  
+RESINE;sabic;;KG; - ; - ; - ; - ;  -  
+RESINE;ABS BLANC INEOS STYROLUTION GP-22;;KG; - ; - ; - ; - ;  -  
+TVCKD;QA55Q80BAUSBM;;PCS; - ; - ; - ; - ; 2 
+TVCKD;QA55Q80CAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA55QN90BAUSBM;;PCS; - ; - ; - ; - ; 1 
+TVCKD;QA65Q80BAUSBM;;PCS; - ; - ; - ; - ; 23 
+TVCKD;QA65QN90BAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA75QN90BAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA75Q70CAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA85QN800CUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA32N5000ASCBM;;PCS; - ; - ; - ; - ; 67 
+TVCKD;UA32T5300AUCBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA43N5000ASCBM;;PCS; - ; - ; - ; - ; 26 
+TVCKD;UA43T5300AUCBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA50AU7000UCBM;;PCS; - ; - ; - ; - ; 22 
+TVCKD;UA50CU7000UCBM;;PCS; - ; - ; - ; - ; 4 
+TVCKD;UA55AU7000UCBM;;PCS; - ; - ; - ; - ; 3 
+TVCKD;UA55BU8000USBM;;PCS; - ; - ; - ; - ; 13 
+TVCKD;UA55CU7000UCBM;;PCS; - ; - ; - ; - ; 11 
+TVCKD;UA55CU8000USBM;;PCS; - ; - ; - ; - ; 3 
+TVCKD;UA58AU7000UCBM;;PCS; - ; - ; - ; - ; 4 
+TVCKD;UA58CU7000UCBM;;PCS; - ; - ; - ; - ; 4 
+TVCKD;UA65AU7000UCBM;;PCS; - ; - ; - ; - ; 20 
+TVCKD;UA65BU8000USBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA65CU7000UCBM;;PCS; - ; - ; - ; - ; 3 
+TVCKD;UA65CU8000USBM;;PCS; - ; - ; - ; - ; 11 
+TVCKD;UA75CU7000UCBM;;PCS; - ; - ; - ; - ; 1 
+TVCKD;QA85QN800BUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA65Q80CAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA65QN90CAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA75QN90CAUSBM;;PCS; - ; - ; - ; - ; 1 
+TVCKD;UA55DU7000USBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA65DU7000USBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA75DU7000USBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA55QN90DAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA65QN90DAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA75Q70DAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA85QN800DUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA85QN90DAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA85DU8000USBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA65Q70DAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA60DU7000USBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA43DU7000USBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA50DU7000USBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA55Q70DAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA43F6000FUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA55QN90FAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA55S85FAESBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA65S85FAESBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA77S85FAESBM;;PCS; - ; - ; - ; - ;  -  
+WM;WA70H4200SWOBS;;PCS; - ; - ; - ; - ;  -  
+WM;WA70H4200SYOBS;;PCS; 1 560 ; - ; 1 560 ; - ;  -  
+WM;WA90T5260BYOBS;;PCS; 1 200 ; - ; 975 ; 225 ;  -  
+WM;WW70T4020CXOBS;;PCS; - ; 1 800 ; 1 800 ; - ;  -  
+WM;WW70T4020EEOBS;;PCS; - ; 200 ; 200 ; - ;  -  
+WM;WW80TA046TEOBS;;PCS; - ; 800 ; 200 ; 600 ;  -  
+WM;WW80TA046AXOBS;;PCS; - ; 1 200 ; 1 000 ; 200 ;  -  
+WM;WW80T554DANOBS;;PCS; - ; - ; - ; - ;  -  
+WM;WW90T554DANOBS;;PCS; - ; 640 ; 640 ; - ;  -  
+WM;12KG TWIN TUB;;PCS; 456 ; 11 000 ; 5 574 ; 5 882 ;  -  
+WM; 60 CMS CLASSIC CHIMNEY HOODS INOX DOUBLE MOTORS;;PCS; - ; - ; - ; - ;  -  
+WM;90 CMS CLASSIC CHIMNEY HOODS INOX DOUBLE MOTORS;;PCS; - ; - ; - ; - ;  -  
+WM;SF60-M2DVCX 90015938;;PCS; 299 ; - ; - ; 299 ;  -  
+WM;SF60-M3MVCX 90015953;;PCS; 449 ; - ; - ; 449 ;  -  
+WM;SF60-M3DVCGB 90015952;;PCS; 61 ; - ; - ; 61 ;  -  
+WM;SF60-G2DVCX 90015954;;PCS; 449 ; - ; 443 ; 6 ;  -  
+WM;SF60-G2DVCGB 90015955;;PCS; 99 ; - ; 99 ; - ;  -  
+WM;SF60-G3MVCX 90015956;;PCS; 449 ; - ; 222 ; 227 ;  -  
+WM;SF60-E2DVCX  90015957;;PCS; 149 ; - ; 148 ; 1 ;  -  
+WM;SF60-E2DVCGB  90015958;;PCS; 449 ; - ; 320 ; 129 ;  -  
+WM;ST60-4BE1X;;PCS; - ; - ; - ; - ;  -  
+WM;ST60-4BFS2X;;PCS; - ; - ; - ; - ;  -  
+WM;ST60-4BSW4GB;;PCS; - ; - ; - ; - ;  -  
+WM;ST60-4BSW3X;;PCS; - ; - ; - ; - ;  -  
+WM;ST70-5BEW5X;;PCS; - ; - ; - ; - ;  -  
+WM;ST70-5BFS6X;;PCS; - ; - ; - ; - ;  -  
+WM;ST70-5BSW7GB;;PCS; - ; - ; - ; - ;  -  
+WM;SH60-P1X;;PCS; 145 ; - ; 142 ; 3 ;  -  
+WM;SH60-DT2GB;;PCS; 9 ; - ; 7 ; 2 ;  -  
+WM;SH60-TT3X;;PCS; 1 ; - ; - ; 1 ;  -  
+WM;SH90-DT4GB;;PCS; 6 ; - ; - ; 6 ;  -  
+WM;P612FLG;;PCS; 1 224 ; - ; 1 196 ; 28 ;  -  
+WM;C2111FLB;;PCS; 1 530 ; - ; 1 528 ; 2 ;  -  
+WM;C2111WDB;;PCS; 612 ; - ; 610 ; 2 ;  -  
+EMBALLAGEREF;FICHE GARANTIE SKY 12 MOIS;;PCS; 1 000 ; - ; - ; 1 000 ;  -  
+EMBALLAGEREF;FICHE GARANTIE SKY 24 MOIS;;PCS; 3 000 ; - ; - ; 3 000 ;  -  
+EMBALLAGEREF;LABEL ENERGY-RT59K6231B1;;PCS; 1 806 ; 250 ; - ; 2 056 ;  -  
+EMBALLAGEREF;LABEL ENERGY-RT49K5532WW;;PCS; 105 ; - ; - ; 105 ;  -  
+PEM;SBTP40S(2012SS);;PCS; - ; - ; - ; - ;  -  
+PEM;SPTN605B(LW-6946G1);;PCS; - ; - ; - ; - ;  -  
+PEM;SPTN605R(LW-6946G1);;PCS; - ; - ; - ; - ;  -  
+PEM;SBM602S(LW-3528G1);;PCS; - ; - ; - ; - ;  -  
+PEM;SBM602B(LW-3528G1);;PCS; - ; - ; - ; - ;  -  
+PEM;SPTM1510R(LW-6935G1);;PCS; - ; - ; - ; - ;  -  
+PEM;SPTM1510B(LW-6935G1);;PCS; - ; - ; - ; - ;  -  
+PEM;SPTN1207BX(LW-6936);;PCS; - ; - ; - ; - ;  -  
+PEM;SBMH1258B(LW-3516G1);;PCS; - ; - ; - ; - ;  -  
+PEM;SBM804B(LW-3350G2);;PCS; - ; - ; - ; - ;  -  
+PEM;SMC1303TB(LW-6603);;PCS; - ; - ; - ; - ;  -  
+PEM;SCOOTER X8;;PCS; - ; - ; - ; - ;  -  
+PEM;SCOOTER X11;;PCS; - ; - ; - ; - ;  -  
+AUTREMP;PVC NOIR;;KG; 5 000 ; - ; - ; 5 000 ;  -  
+EMBALLAGEWM;Etiquette AC Front Face;ET08-000013;PCS; - ; - ; - ; - ;  -  
+TVCKD;UA98DU9000;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA55Q7FAAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA65Q7FAAUSBM;;PCS; - ; - ; - ; - ;  -  
+TVCKD;QA75Q7FAAUSBM;;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Box Unité Interiure/18K XA73I;ET08-000018;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Box Unité Interiure/18K XAF1T;ET08-000023;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Box Unité Interiure/24K XA73I;ET08-000019;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Fiche Energetique/9K XA73I;ET08-000025;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Fiche Energetique/18K XA73I;ET08-000027;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Fiche Energetique/12K XAF1T;ET08-000031;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Rating Label Silver Arab 60x120;ET08-000005;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;ETIQUETTE Ean Code TV 45x15;ET01-000002;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Warranty Card /BISMA;ET08-000034;PCS; 1 262 ; - ; - ; 1 262 ;  -  
+EMBALLAGETV;Warranty card SKY 24 MOIS;LT-0004;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Box Unité Interiure/24K XAF1T;ET08-000035;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Box Unité Interiure/12K XA73I;ET08-000017;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Fiche Energetique/12K XA73I;ET08-000026;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Fiche Energetique/18K XAF1T;ET08-000032;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;CARD-WARRANTY;6801-002202;PCS; 2 134 ; - ; 1 800 ; 334 ;  -  
+EMBALLAGETV;tape packing;LT-0009;PCS; 38 000 ; - ; - ; 38 000 ;  -  
+EMBALLAGETV;Etiquette AC Tropicalsé;ET08-000015;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Box Unité Interiure/9K XA73I;ET08-000016;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Box Unité Interiure/12K TPH11;ET08-000020;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Box Unité Interiure/12K XAF1T;ET08-000022;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Fiche Energetique/24K XA73I;ET08-000028;PCS; - ; - ; - ; - ;  -  
+EMBALLAGETV;Etiquette AC Fiche Energetique/24K XAF1T;ET08-000033;PCS; - ; - ; - ; - ;  -  
+GAS;R600;C4H10,4N,R-600a,68L_30kg;BOUTTEILLE; 8 ; - ; - ; 8 ;  -  
+GAS;R410;AC-GAZR410A;BOUTTEILLE; 14 800 ; - ; - ; 14 800 ;  -  
+GAS;ACYTELENE;;BOUTTEILLE; - ; - ; - ; - ;  -  
+GAS;OXYGENE;;BOUTTEILLE; - ; - ; - ; - ;  -  
+GAS;GAZ Freon R32A;GAZ R32A;BOUTTEILLE; 1 480 ; - ; - ; 1 480 ;  -  
+GAS;AZOTE;;BOUTTEILLE; - ; - ; - ; - ;  -  
+WM;P612FLG;;PCS; 1 224 ; - ; 1 196 ; 28 ;  -  
+WM;C2111FLB;;PCS; 1 530 ; - ; 1 528 ; 2 ;  -  
+WM;C2111WDB;;PCS; 612 ; - ; 610 ; 2 ;  -  
+WM;C512FLG;;PCS; - ; - ; 304 ;-304 ;  -  
+WM;SLV13-62ADB;;PCS; - ; - ; 161 ;-161 ;  -  
+WM;SLV13-62ADS;;PCS; - ; - ; 162 ;-162 ;  -  
+WM;SLV13-62ADX;;PCS; - ; - ; 480 ;-480 ;  -  
+EMBALLAGEWM;FICHE GARANTIE kiksin;;Ps; 6 000 ; - ; - ; 6 000 ;
+EMBALLAGEWM;FICHE FRECHEUR;;Ps; 1 500 ; - ; - ; 1 500 ;
+EMBALLAGEWM;LABEL 60*20;;Ps; 40 500 ; - ; - ; 40 500 ;
+EMBALLAGEWM;LABEL 50*20;;Ps; 53 000 ; - ; 50 000 ; 3 000 ;
+EMBALLAGEWM;LABEL 50*120;;Ps; 40 000 ; - ; 33 600 ; 6 400 ;
+EMBALLAGEWM;LABEL 58*67;;Ps; 14 000 ; - ; 2 000 ; 12 000 ;
+WM;SKY HOOD CL-60-2IN ;;; - ; - ; 94 ;;
+WM;SKY HOOD CL-90-2IN;;; - ; - ; - ;;
+WM;ST60-4BE1X 90016132;;Ps; 2 ; - ; - ; 2 ;
+WM;ST60-4BFS2X 90016133;;Ps; 1 ; - ; - ; 1 ;
+WM;ST60-4BSW4GB 90016134;;Ps; 5 ; - ; - ; 5 ;
+WM;ST60-4BSW3X 90016135;;Ps; 6 ; - ; - ; 6 ;
+WM;ST70-5BEW5X 90016136;;Ps; 2 ; - ; - ; 2 ;
+WM;ST70-5BFS6X 90016137;;Ps; 4 ; - ; - ; 4 ;
+WM;ST70-5BSW7GB 90016138;;Ps; - ; - ; - ; - ;
+WM;LABEL PACKING All model 100*80;ET-10080;PC; 6 500 ; - ; - ; 6 500 ;
+WM;LABEL PACKING All model 110*80;ET-11080;PC; 12 906 ; - ; 1 000 ; 47 906 ;
+WM;3M Adhesive Tape (33M/ROLL)this is accessories to tape the glass(Width 10mm*Thickness 1.0mm);LT-0001;M; 41 427 ; - ; - ; 41 427 ;
+EMBALLAGEWM;Warranty Card Samsung;6801-002338;PC; 8 122 ; - ; - ; 8 122 ;
+EMBALLAGEWM;Etiquette d'impression 85x67 PP;ET03-000011;PC; - ; - ; 1 000 ; 1 000 ;
+RESINE;ABS NOIRE GP-22 TERLURAN BK10009;;KG; - ; - ; - ;;
+RESINE;COLORANT PP WHITE;;KG; - ; - ; - ;;
+RESINE;COLORANT ABS NOIR;;KG; - ; - ; - ;;
+RESINE;ABS GRIS RM-0760;;KG; - ; - ; - ;;
+TVCKD;UA43F8000FUSBM;;PCS; 1 060 ; - ; - ;  -  ;  -  
+TVCKD;UA58AU8000UCBM;;PCS; 680 ; - ; - ;  -  ;  -  
