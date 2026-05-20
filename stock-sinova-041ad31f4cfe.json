@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "stock-sinova",
+  "private_key_id": "041ad31f4cfe9786585f35a79c712f9b4c67b99c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC0TTC4K+C7Hv7S\n1KsA91Rj4l4XE3FdMFHwJmtVVBPd3vzcAWRxTBJ63LfR42nU1s02e74/xr9PjmKM\n53EeHtmvZ4vjnLgpY9JZluVLpiY6+UdFAdAtDjOZTJFrgX51ohk/Ijv0y64qySiF\nIBfxBSTX5VJ92ZY/V9bQxnhD0LVnXT5bnLV0FJMVQs8d75BYhV0rWpoL+OKWIcd4\nNiVZ4Q4P+34ZzVt17n70lstsZpayGfKhKLr/jThU/QIHvQkB4lv36Z6bvHbbeHzf\nPeKP1cv+QrVimZY7bqcWxu4ajDkWHFCte3wzn0SR0Olw00zsMsWtVnEJZxAlOS5Z\nziQjnD/bAgMBAAECggEABKoYYAWMweecpYF54CaF4aejjDwwtslfOxyGPlSDDOF2\nqkg4ZNDeF1c+z0K1O3jrIXO0oNXBFC5bXILrNPjSnlUP/NwA5An04p5Fpzstsxtr\n1MUDDp6ctU1MhoaQAVNtgTtZUKR62epU4Ab6hiDPweyjNeAYcm2cl3J2oPHGlABP\nVO41YK7D65SinPg7/yZCIVYOTt9lTlfuGVwtrW3ZFDDSnczhX2f8zZJ2K2HZYT5p\nkD/TlmlGDRmS2qYeLT492soaFXnAlg7TyF7af3HsTq/OJvOUuxSOU//abx/Bo7DN\nFEqsGsDWDZVIXjGSbodP2NJGa9lBCJbvcXvNt5pgkQKBgQDXK+ui/iMLM2Eu3jDw\nB7xCFjvCEuui5AsG4miQJA+rUGlLXrtC64VcajMbpg0deLw0wd1N+WhonQnxwb9Y\nWOOyHttnjS6WuS+7zldX1jFO4o45Q7llQu1Hvwt25hdospMLOqWBCmQWCKjOOFVG\nkZFmM0xUJq0URqRH87N2s7yn3wKBgQDWg3AnaP3SM1VItLQ9hclTCcgeP/PwAuOK\nVdKrc5qmYwqmdhMgbmw7pPAQ2FQWZIa+mI7K/Moec9cRgK0ZtbKB8Kv3Q8hzec+S\np3eOI6FXbtDhxmE9xhlxKINXS0vEJVfnefTOVaU/oXFw3voSv2T5cOETNBdwLzBH\njAVUcPwXhQKBgF09ZAOiWq8s2Y0ErXIl9/cvST/lEQTqCrk1/ReQ+NVEqAwIBd+O\nzaBpSLJPd1lxCyVVaL+0NwE2I6wGSBNRmYGDC5JIxIp9vuiEFqcyYvWLCRRZe4oc\nwVOYvrAMLtKopz1zcWqEhTBjGjsagCFvTPFbg1Tn2ZJytheTzA3A/xxDAoGAaYy9\nB7dChUZa5W587XTB7gj3HeNL7UIOoge+pDw60ToUiHm6yY9r1CFBOpinL2mBX5ED\nWd/ut/M51NPi2K6tygAZLY59uEwslbWvPxJLFhFh2GXbfSDXbfWIQtC61CWnzi8V\nBN3hdKDEh8w/cjAYyCABr4hHLB0b/WhpSvZZJF0CgYBAxBkV17sV6WJtwQ2jWp50\nrjXF8BYEC2UK5ZEnpbUTt9Cagpelxvf8/9IE4J76+2U2KvsSAcHblum0WdLLZ9oR\n6t2WTotX74drc3xzrECwJFIt4ccJql5CFHMQEcy7690CgSe4oGp1Eh4eg4GwWDLQ\n1RW81lbt4cVaxT388N4lKA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "stock-app@stock-sinova.iam.gserviceaccount.com",
+  "client_id": "117233570569949159993",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/stock-app%40stock-sinova.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
