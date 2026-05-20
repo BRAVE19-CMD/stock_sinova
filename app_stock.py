@@ -10,25 +10,28 @@ st.set_page_config(page_title="STOCKS_SINOVA", layout="wide", initial_sidebar_st
 
 st.markdown("""
 <style>
-    .stApp { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); }
+    html, body, .stApp { background: #0f0c29 !important; background: linear-gradient(135deg, #0f0c29, #302b63, #24243e) !important; }
     .stTabs [data-baseweb="tab-list"] { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 5px; }
     .stTabs [data-baseweb="tab"] { color: #e0e0ff !important; font-weight: 600; font-size: 14px; }
     .stTabs [aria-selected="true"] { background: linear-gradient(135deg, #6366f1, #8b5cf6) !important; border-radius: 8px !important; color: #fff !important; }
-    .stMetric { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+    .stMetric { background: rgba(255,255,255,0.08) !important; border-radius: 12px; padding: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
     .stMetric label { color: #a5b4fc !important; font-weight: 500; }
     .stMetric [data-testid="stMetricValue"] { color: #fff !important; font-size: 1.8rem !important; font-weight: 700; }
-    .stDataFrame { background: rgba(255,255,255,0.05); border-radius: 12px; color: #fff; }
+    .stDataFrame { background: rgba(255,255,255,0.05) !important; border-radius: 12px; color: #fff !important; }
     .stDataFrame table { color: #e0e0ff !important; }
     .stDataFrame th { background: rgba(99,102,241,0.3) !important; color: #fff !important; }
     .stDataFrame td { background: rgba(255,255,255,0.03) !important; color: #e0e0ff !important; }
     .stSelectbox label, .stMultiSelect label, .stRadio label, .stNumberInput label { color: #a5b4fc !important; font-weight: 500; }
-    .stSelectbox div[data-baseweb="select"] { background: rgba(255,255,255,0.08); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); color: #fff; }
+    .stSelectbox div[data-baseweb="select"] { background: #1e1b4b !important; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); color: #fff !important; }
+    .stSelectbox div[data-baseweb="select"]:hover { border-color: #6366f1; }
+    .stSelectbox ul { background: #1e1b4b !important; }
+    div[role="option"] { color: #e0e0ff !important; }
     .stButton button { background: linear-gradient(135deg, #6366f1, #8b5cf6) !important; color: #fff !important; border: none !important; border-radius: 10px !important; font-weight: 600 !important; padding: 10px 25px !important; transition: all 0.3s !important; }
     .stButton button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(99,102,241,0.4) !important; }
     h1, h2, h3, .stSubheader { color: #f0f0ff !important; font-weight: 700; }
-    .stSidebar { background: rgba(255,255,255,0.03) !important; }
+    .stSidebar { background: rgba(15,12,41,0.95) !important; }
     .stSidebar label { color: #a5b4fc !important; }
-    .stSidebar .stSelectbox div[data-baseweb="select"] { background: rgba(255,255,255,0.08); border-radius: 8px; }
+    .stSidebar .stSelectbox div[data-baseweb="select"] { background: #1e1b4b !important; border-radius: 8px; }
     .stExpander { background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
     .stExpander summary { color: #e0e0ff !important; font-weight: 600; }
     .stAlert { border-radius: 12px; color: #fff; }
@@ -38,14 +41,21 @@ st.markdown("""
     .stInfo { background: rgba(59,130,246,0.2) !important; border: 1px solid rgba(59,130,246,0.3) !important; color: #93c5fd !important; }
     div[data-testid="stDataFrame"] { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; }
     .stCaption { color: rgba(255,255,255,0.5) !important; }
-    p, li, span:not([class]) { color: #e0e0ff; }
+    .main > div { background: transparent !important; }
+    .block-container { background: transparent !important; }
+    p, li, span, div:not([data-baseweb]) { color: #e0e0ff; }
+    section[data-testid="stSidebar"] > div { background: transparent !important; }
     .stTextInput label, .stDateInput label { color: #a5b4fc !important; font-weight: 500; }
-    .stTextInput input, .stDateInput input { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; }
-    .stNumberInput input { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; }
+    .stTextInput input, .stDateInput input { background: #1e1b4b !important; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff !important; }
+    .stNumberInput input { background: #1e1b4b !important; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff !important; }
     .stRadio div[role="radiogroup"] { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 5px; }
     .stRadio div[role="radio"] { color: #e0e0ff !important; }
     .stCheckbox label { color: #e0e0ff !important; }
     .stDownloadButton button { background: linear-gradient(135deg, #10b981, #059669) !important; color: #fff !important; border: none !important; border-radius: 10px !important; }
+    .stTextInput > div, .stDateInput > div { background: transparent !important; }
+    .row-widget.stSelectbox > div { background: transparent !important; }
+    .st-emotion-cache-1gv3huu, .st-emotion-cache-1dj0hjr, .st-emotion-cache-1aezhbc { background: transparent !important; }
+    .st-bd, .st-bb { border-color: rgba(255,255,255,0.1) !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -743,19 +753,17 @@ def update_stock_in_csv(ref, add_receptions, add_production):
         df = pd.read_csv(MP_KIT_CSV, sep=';', encoding='utf-8-sig', low_memory=False)
         df.columns = df.columns.str.strip()
         
+        for col in ['Stock initial', 'Réceptions', 'Production', 'Stock Final']:
+            if col in df.columns:
+                df[col] = df[col].astype(str).str.replace(' ', '', regex=False).str.replace('-', '0', regex=False)
+                df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
+        
         mask = df['Référence'].astype(str).str.strip() == ref
         if mask.any():
             current_row = df.loc[mask].iloc[0]
-            
-            def parse_val(v):
-                v = str(v).strip()
-                if v in ['-', '', 'nan', 'None']:
-                    return 0
-                return int(v.replace(' ', '').replace('-', '0'))
-            
-            stock_init = parse_val(current_row['Stock initial'])
-            current_receptions = parse_val(current_row['Réceptions'])
-            current_production = parse_val(current_row['Production'])
+            stock_init = int(current_row['Stock initial'])
+            current_receptions = int(current_row['Réceptions'])
+            current_production = int(current_row['Production'])
             
             new_receptions = current_receptions + add_receptions
             new_production = current_production + add_production
