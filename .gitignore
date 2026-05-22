@@ -1,0 +1,6 @@
+stock-sinova-*.json
+__pycache__/
+*.pyc
+.env
+saisie_mp.csv
+.streamlit/secrets.toml
