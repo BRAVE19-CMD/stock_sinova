@@ -136,9 +136,7 @@ def consolidate_all():
         export_cols = mapping.get("export", [])
         max_col = len(cols) - 1
         indiv_valid = {i: v for i, v in indiv.items() if isinstance(i, int) and 0 <= i <= max_col}
-        if not indiv_valid:
-            pass  # Skip if no valid individual columns
-        else:
+        if indiv_valid:
             names_list = [cols[i] for i in sorted(indiv_valid.keys())]
             idx_map = {cols[i]: depot for i, depot in indiv_valid.items()}
             dm = df_s.melt(id_vars=[prod_col], value_vars=names_list, var_name='_col', value_name='Stock Final')
@@ -164,7 +162,6 @@ def consolidate_all():
     all_df = pd.concat(parts, ignore_index=True)
     all_df['Stock Final'] = pd.to_numeric(all_df['Stock Final'], errors='coerce').fillna(0).astype(int)
     all_df[['Référence', 'Dépôt']] = all_df[['Référence', 'Dépôt']].astype(str).apply(lambda c: c.str.strip())
-
     ref_desig = {}
     if os.path.exists(CSV) and os.path.getsize(CSV) >= 100:
         try:
@@ -182,7 +179,6 @@ def consolidate_all():
                 ref_desig.update(json.load(f))
         except Exception:
             pass
-
     all_df['Désignation'] = all_df['Référence'].map(ref_desig).fillna(all_df['Référence'].apply(get_designation))
     result = all_df[['Dépôt', 'Désignation', 'Référence', 'Stock Final']].sort_values(['Référence', 'Dépôt']).reset_index(drop=True)
     result.to_csv(CSV, sep=';', index=False, encoding='utf-8-sig')
@@ -207,18 +203,88 @@ def load_data():
     return df
 
 df = load_data()
-
-# Auto-refresh page toutes les 10 minutes
 st.markdown('<meta http-equiv="refresh" content="600">', unsafe_allow_html=True)
-
 depots = sorted(df['Dépôt'].unique())
 
-st.sidebar.header("Filtres")
+MP_KIT_CSV = os.path.join(BASE_DIR, "kit+mtp.csv")
+MP_SAISIE_CSV = os.path.join(BASE_DIR, "saisie_mp.csv")
 
+@st.cache_data(ttl=600)
+def load_mp():
+    try:
+        m = pd.read_csv(MP_KIT_CSV, sep=';', encoding='utf-8-sig', low_memory=False)
+        m = m.iloc[:, :9].copy()
+        m.columns = ['Désignation', 'Référence', 'code article', 'UM', 'Stock initial', 'Réceptions', 'Production', 'Stock Final', 'SHORTAGE']
+        m.columns = m.columns.str.strip()
+        for col in m.select_dtypes('object').columns:
+            m[col] = m[col].astype(str).str.strip().replace('nan', '').replace('None', '')
+        for col in ['Stock initial', 'Réceptions', 'Production', 'Stock Final', 'SHORTAGE']:
+            if col in m.columns:
+                m[col] = m[col].astype(str).str.replace(' ', '', regex=False).str.replace('-', '0', regex=False)
+                m[col] = pd.to_numeric(m[col], errors='coerce').fillna(0).astype(int)
+        m.rename(columns={
+            'Désignation': 'Catégorie', 'Référence': 'Article', 'code article': 'Code',
+            'Stock initial': 'Stock Initial', 'Réceptions': 'Entrées', 'Production': 'Sorties',
+            'SHORTAGE': 'Shortage'
+        }, inplace=True)
+        return m
+    except Exception:
+        return pd.DataFrame(columns=['Catégorie', 'Article', 'Code', 'UM', 'Stock Initial', 'Entrées', 'Sorties', 'Stock Final', 'Shortage'])
+
+@st.cache_data(ttl=600)
+def load_mp_kit():
+    k = pd.read_csv(MP_KIT_CSV, sep=';', encoding='utf-8-sig', low_memory=False)
+    k = k.iloc[:, :9].copy()
+    k.columns = k.columns.str.strip()
+    for col in k.select_dtypes('object').columns:
+        k[col] = k[col].astype(str).str.strip().replace('nan', '')
+    for col in ['Stock initial', 'Réceptions', 'Production', 'Stock Final', 'SHORTAGE']:
+        if col in k.columns:
+            k[col] = k[col].astype(str).str.replace(' ', '', regex=False).str.replace('-', '0', regex=False)
+            k[col] = pd.to_numeric(k[col], errors='coerce').fillna(0).astype(int)
+    return k
+
+def load_saisie_mp():
+    if os.path.exists(MP_SAISIE_CSV):
+        s = pd.read_csv(MP_SAISIE_CSV, sep=';', encoding='utf-8-sig')
+    else:
+        s = pd.DataFrame(columns=["Date", "Désignation", "Référence", "code article", "UM",
+                                   "Stock initial", "Réceptions", "Production", "Stock Final", "SHORTAGE"])
+    return s
+
+def save_saisie_mp(df_s):
+    df_s.to_csv(MP_SAISIE_CSV, sep=';', index=False, encoding='utf-8-sig')
+
+def update_stock_in_csv(ref, add_receptions, add_production):
+    try:
+        df = pd.read_csv(MP_KIT_CSV, sep=';', encoding='utf-8-sig', low_memory=False)
+        df.columns = df.columns.str.strip()
+        for col in ['Stock initial', 'Réceptions', 'Production', 'Stock Final']:
+            if col in df.columns:
+                df[col] = df[col].astype(str).str.replace(' ', '', regex=False).str.replace('-', '0', regex=False)
+                df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
+        mask = df['Référence'].astype(str).str.strip() == ref
+        if mask.any():
+            current_row = df.loc[mask].iloc[0]
+            stock_init = int(current_row['Stock initial'])
+            current_receptions = int(current_row['Réceptions'])
+            current_production = int(current_row['Production'])
+            new_receptions = current_receptions + add_receptions
+            new_production = current_production + add_production
+            new_stock_final = stock_init + new_receptions - new_production
+            df.loc[mask, 'Réceptions'] = new_receptions
+            df.loc[mask, 'Production'] = new_production
+            df.loc[mask, 'Stock Final'] = new_stock_final
+            df.to_csv(MP_KIT_CSV, sep=';', index=False, encoding='utf-8-sig')
+            return new_stock_final
+        return None
+    except Exception as e:
+        st.error(f"Erreur mise à jour stock: {e}")
+        return None
+st.sidebar.header("Filtres")
 if st.sidebar.button("🔄 Rafraîchir les données"):
     st.cache_data.clear()
     st.rerun()
-
 if st.sidebar.button("🔄 Forcer la consolidation"):
     if consolidate_all():
         st.cache_data.clear()
@@ -234,9 +300,14 @@ st.sidebar.markdown("---")
 show_saisie = False
 is_admin = False
 sidebar_option = st.sidebar.selectbox("🔒 Options", ["Masqué", "🔐 Saisie MP", "👑 Admin"])
+
+MP_PASS = st.secrets.get("mp_password", "sinova2024")
+ADMIN_EMAIL = st.secrets.get("admin_email", "hamoudikzei@gmail.com")
+ADMIN_PASS = st.secrets.get("admin_password", "hamoudi80291")
+
 if sidebar_option == "🔐 Saisie MP":
     mp_password = st.sidebar.text_input("Mot de passe Saisie MP", type="password")
-    if mp_password == "sinova2024":
+    if mp_password == MP_PASS:
         st.sidebar.success("Accès autorisé")
         show_saisie = True
     elif mp_password:
@@ -244,7 +315,7 @@ if sidebar_option == "🔐 Saisie MP":
 elif sidebar_option == "👑 Admin":
     admin_email = st.sidebar.text_input("Email admin")
     admin_pass = st.sidebar.text_input("Mot de passe admin", type="password")
-    if admin_email == "hamoudikzei@gmail.com" and admin_pass == "hamoudi80291":
+    if admin_email == ADMIN_EMAIL and admin_pass == ADMIN_PASS:
         st.sidebar.success("✅ Mode Admin activé")
         is_admin = True
         show_saisie = True
@@ -252,11 +323,9 @@ elif sidebar_option == "👑 Admin":
         st.sidebar.error("Identifiants incorrects")
 
 depot_sel = st.sidebar.selectbox("📌 Dépôt", ["Tous"] + depots)
-
 designations = sorted(df['Désignation'].unique())
 des_sel = st.sidebar.selectbox("📦 Catégorie", ["Toutes"] + designations)
 des_list = [] if des_sel == "Toutes" else [des_sel]
-
 refs_dispo = sorted(df[df['Désignation'].isin(des_list)]['Référence'].unique()) if des_list else sorted(df['Référence'].unique())
 
 if des_sel == "AC":
@@ -319,14 +388,12 @@ def color_row(row):
 # -------- TAB 1 : DONNEES --------
 if tab_sel == "📋 Données":
     st.title("📊 Consolidation des Stocks")
-
     k1, k2, k3, k4 = st.columns(4)
     total_s = filtered['Stock Final'].sum()
     k1.metric("Stock Total", f"{total_s:,}")
     k2.metric("Lignes", f"{len(filtered):,}")
     k3.metric("Dépôts", filtered['Dépôt'].nunique())
     k4.metric("Produits", filtered['Référence'].nunique())
-
     styled = filtered.style.apply(color_row, axis=1)
     st.dataframe(styled, use_container_width=True, hide_index=True, height=800)
 
@@ -343,22 +410,16 @@ if tab_sel == "📍 Emplacement":
         cols[1].metric("Dépôts avec stock", len(non_zero))
         cols[2].metric("Dépôts sans stock", len(loc[loc['Stock Final'] == 0]))
         cols[3].metric("Désignation", loc['Désignation'].iloc[0])
-
-        # Carte des dépôts (barres horizontales)
         loc_sorted = loc.sort_values('Stock Final')
         fig = px.bar(loc_sorted, x='Stock Final', y='Dépôt', orientation='h',
                      color='Stock Final', color_continuous_scale='RdYlGn',
                      text_auto=True, title=f"Répartition de {ref_loc}")
         fig.update_layout(height=400, margin=dict(l=10, r=10, t=40, b=10))
         st.plotly_chart(fig, use_container_width=True, key="empl_ref_loc")
-
-        st.dataframe(loc.style.apply(color_row, axis=1),
-                     use_container_width=True, hide_index=True)
-
+        st.dataframe(loc.style.apply(color_row, axis=1), use_container_width=True, hide_index=True)
 # -------- TAB 3 : ANALYSE --------
 if tab_sel == "📈 Analyse":
     st.title("📈 Analyse des Stocks")
-
     total_stock = df['Stock Final'].sum()
     total_prods = df['Référence'].nunique()
     total_depots = df['Dépôt'].nunique()
@@ -369,10 +430,7 @@ if tab_sel == "📈 Analyse":
     cols[2].metric("Dépôts", f"{total_depots}")
     cols[3].metric("Produits en stock", f"{prods_en_stock:,}")
     cols[4].metric("Stock moyen/dépôt", f"{total_stock // total_depots:,}")
-
     st.divider()
-
-    # --- Stock par Catégorie ---
     st.subheader("📦 Stock par Catégorie")
     by_des = df.groupby('Désignation', as_index=False)['Stock Final'].sum()
     by_des = by_des.sort_values('Stock Final', ascending=False)
@@ -382,10 +440,7 @@ if tab_sel == "📈 Analyse":
     c1, c2 = st.columns([3, 1])
     c1.plotly_chart(fig, use_container_width=True, key="anl_cat_bar")
     c2.dataframe(by_des, use_container_width=True, hide_index=True)
-
     st.divider()
-
-    # --- Stock par Dépôt ---
     st.subheader("🏢 Stock par Dépôt")
     by_dep = df.groupby('Dépôt', as_index=False)['Stock Final'].sum()
     by_dep = by_dep.sort_values('Stock Final', ascending=False)
@@ -395,34 +450,26 @@ if tab_sel == "📈 Analyse":
     c1, c2 = st.columns([3, 1])
     c1.plotly_chart(fig, use_container_width=True, key="anl_dep_bar")
     c2.dataframe(by_dep, use_container_width=True, hide_index=True)
-
     st.divider()
-
-    # --- Répartition par Dépôt (détaillée) ---
     st.subheader("📍 Répartition détaillée par Dépôt")
     pivot = df.pivot_table(index='Dépôt', columns='Désignation', values='Stock Final',
                            aggfunc='sum', fill_value=0)
     pivot['Total Stock'] = pivot.sum(axis=1)
     pivot = pivot.sort_values('Total Stock', ascending=False)
     st.dataframe(pivot.astype(int), use_container_width=True)
-
     by_dep_des = df.groupby(['Dépôt', 'Désignation'], as_index=False)['Stock Final'].sum()
     fig = px.treemap(by_dep_des, path=['Dépôt', 'Désignation'], values='Stock Final',
                      color='Stock Final', color_continuous_scale='RdYlGn',
                      hover_data={'Stock Final': ':,'})
     fig.update_layout(height=500, margin=dict(l=5, r=5, t=5, b=5))
     st.plotly_chart(fig, use_container_width=True, key="anl_treemap")
-
     dep_metrics = df.groupby('Dépôt').agg(
         Produits=('Référence', 'nunique'),
         Stock_Total=('Stock Final', 'sum')
     ).sort_values('Stock_Total', ascending=False)
     dep_metrics['Moyen/Produit'] = (dep_metrics['Stock_Total'] / dep_metrics['Produits']).astype(int)
     st.dataframe(dep_metrics, use_container_width=True)
-
     st.divider()
-
-    # --- Designation Pie (filtrable par dépôt) ---
     st.subheader("🥧 Répartition par Catégorie")
     pie_depot = st.selectbox("Filtrer par dépôt", ["Tous"] + depots, key="pie_depot")
     pie_data = df if pie_depot == "Tous" else df[df['Dépôt'] == pie_depot]
@@ -431,10 +478,7 @@ if tab_sel == "📈 Analyse":
                  color_discrete_sequence=px.colors.qualitative.Set3, hole=0.3)
     fig.update_layout(height=450)
     st.plotly_chart(fig, use_container_width=True, key="anl_cat_pie")
-
     st.divider()
-
-    # --- Top / Flop ---
     st.subheader("🏆 Top 10 Produits")
     top = df.groupby(['Référence', 'Désignation'], as_index=False)['Stock Final'].sum()
     top = top.sort_values('Stock Final', ascending=False).head(10)
@@ -442,7 +486,6 @@ if tab_sel == "📈 Analyse":
                  orientation='h', text_auto=True, color_discrete_sequence=px.colors.qualitative.Bold)
     fig.update_layout(height=400)
     st.plotly_chart(fig, use_container_width=True, key="anl_top10")
-
     st.subheader("📉 Flop 10 Produits (stock > 0)")
     flop = df.groupby(['Référence', 'Désignation'], as_index=False)['Stock Final'].sum()
     flop = flop[flop['Stock Final'] > 0].sort_values('Stock Final').head(10)
@@ -450,10 +493,7 @@ if tab_sel == "📈 Analyse":
                  orientation='h', text_auto=True, color_discrete_sequence=px.colors.qualitative.Prism)
     fig.update_layout(height=400)
     st.plotly_chart(fig, use_container_width=True, key="anl_flop10")
-
     st.divider()
-
-    # --- Stock Nul ---
     st.subheader("⚠️ Dépôts à Stock Nul par Catégorie")
     zero = df[df['Stock Final'] == 0].groupby(['Dépôt', 'Désignation']).size().reset_index(name='Produits à 0')
     fig = px.density_heatmap(zero, x='Dépôt', y='Désignation', z='Produits à 0',
@@ -462,10 +502,7 @@ if tab_sel == "📈 Analyse":
     st.plotly_chart(fig, use_container_width=True, key="anl_heatmap")
     with st.expander("Voir le tableau"):
         st.dataframe(zero, use_container_width=True, hide_index=True)
-
     st.divider()
-
-    # --- Rapport Export ---
     st.subheader("📄 Exporter le Rapport")
     export_all = st.checkbox("Inclure toutes les données (pas seulement la sélection)")
     if st.button("📥 Générer le CSV"):
@@ -474,41 +511,9 @@ if tab_sel == "📈 Analyse":
         st.download_button("Télécharger CSV", data=csv, file_name="rapport_stock.csv", mime="text/csv")
 
 # -------- TAB 4 : MATIERES PREMIERES --------
-MP_CSV = os.path.join(BASE_DIR, "kit+mtp.csv")
-
-@st.cache_data(ttl=600)
-def load_mp():
-    try:
-        m = pd.read_csv(MP_CSV, sep=';', encoding='utf-8-sig', low_memory=False)
-        m = m.iloc[:, :9].copy()
-        m.columns = ['Désignation', 'Référence', 'code article', 'UM', 'Stock initial', 'Réceptions', 'Production', 'Stock Final', 'SHORTAGE']
-        m.columns = m.columns.str.strip()
-        for col in m.select_dtypes('object').columns:
-            m[col] = m[col].astype(str).str.strip().replace('nan', '').replace('None', '')
-        for col in ['Stock initial', 'Réceptions', 'Production', 'Stock Final', 'SHORTAGE']:
-            if col in m.columns:
-                m[col] = m[col].astype(str).str.replace(' ', '', regex=False).str.replace('-', '0', regex=False)
-                m[col] = pd.to_numeric(m[col], errors='coerce').fillna(0).astype(int)
-        m.rename(columns={
-            'Désignation': 'Catégorie',
-            'Référence': 'Article',
-            'code article': 'Code',
-            'Stock initial': 'Stock Initial',
-            'Réceptions': 'Entrées',
-            'Production': 'Sorties',
-            'SHORTAGE': 'Shortage'
-        }, inplace=True)
-        return m
-    except Exception:
-        return pd.DataFrame(columns=['Catégorie', 'Article', 'Code', 'UM', 'Stock Initial', 'Entrées', 'Sorties', 'Stock Final', 'Shortage'])
-    
-
 if tab_sel == "🧪 Matières Premières":
     st.title("🧪 Matières Premières - Rapport Détaillé")
-
     mp = load_mp()
-
-    # Filters
     col_f1, col_f2, col_f3 = st.columns(3)
     with col_f1:
         mp_cat = st.selectbox("Catégorie", ["Toutes"] + sorted(mp['Catégorie'].unique()), key="mp_cat")
@@ -518,7 +523,6 @@ if tab_sel == "🧪 Matières Premières":
     with col_f3:
         um_all = sorted([str(v) for v in mp['UM'].unique() if pd.notna(v)])
         mp_um = st.selectbox("Unité", ["Toutes"] + um_all, key="mp_um")
-
     mp_filtered = mp.copy()
     if mp_cat != "Toutes":
         mp_filtered = mp_filtered[mp_filtered['Catégorie'] == mp_cat]
@@ -526,24 +530,17 @@ if tab_sel == "🧪 Matières Premières":
         mp_filtered = mp_filtered[mp_filtered['Article'] == mp_art]
     if mp_um != "Toutes":
         mp_filtered = mp_filtered[mp_filtered['UM'] == mp_um]
-
-    # KPIs
     k1, k2, k3, k4, k5 = st.columns(5)
     k1.metric("Stock Final", f"{mp_filtered['Stock Final'].sum():,}")
     k2.metric("Stock Initial", f"{mp_filtered['Stock Initial'].sum():,}")
     k3.metric("Entrées", f"{mp_filtered['Entrées'].sum():,}")
     k4.metric("Sorties", f"{mp_filtered['Sorties'].sum():,}")
     k5.metric("Shortage", f"{mp_filtered['Shortage'].sum():,}")
-
     st.dataframe(mp_filtered, use_container_width=True, hide_index=True)
-
     st.divider()
-
-    # --- SECTION ANALYSE ---
     sub_tab1, sub_tab2, sub_tab3, sub_tab4, sub_tab5 = st.tabs(
         ["📊 Par Catégorie", "🏆 Top / Flop", "⛔ Shortage", "📈 Mouvements", "📄 Rapport Complet"]
     )
-
     with sub_tab1:
         c1, c2 = st.columns(2)
         with c1:
@@ -554,14 +551,12 @@ if tab_sel == "🧪 Matières Premières":
                          orientation='h', text_auto=True, color_discrete_sequence=px.colors.qualitative.Set2)
             fig.update_layout(showlegend=False, height=450)
             st.plotly_chart(fig, use_container_width=True, key="mp_cat_bar")
-
         with c2:
             st.subheader("Répartition %")
             fig = px.pie(by_cat, values='Stock Final', names='Catégorie',
                          color_discrete_sequence=px.colors.qualitative.Set3, hole=0.4)
             fig.update_layout(height=450)
             st.plotly_chart(fig, use_container_width=True, key="mp_cat_pie")
-
         st.subheader("Détail par Catégorie")
         detail = mp.groupby(['Catégorie', 'UM'], as_index=False).agg(
             Articles=('Article', 'count'),
@@ -573,7 +568,6 @@ if tab_sel == "🧪 Matières Premières":
         ).sort_values('Stock_Final', ascending=False)
         detail.columns = ['Catégorie', 'UM', 'Nb Articles', 'Stock Initial', 'Entrées', 'Sorties', 'Stock Final', 'Shortage']
         st.dataframe(detail, use_container_width=True, hide_index=True)
-
     with sub_tab2:
         c1, c2 = st.columns(2)
         with c1:
@@ -584,7 +578,6 @@ if tab_sel == "🧪 Matières Premières":
                          orientation='h', text_auto=True, color_discrete_sequence=px.colors.qualitative.Bold)
             fig.update_layout(height=450)
             st.plotly_chart(fig, use_container_width=True, key="mp_top10")
-
         with c2:
             st.subheader("📉 Top 10 Plus Petit Stock (>0)")
             flop = mp.groupby(['Article', 'Catégorie'], as_index=False)['Stock Final'].sum()
@@ -593,28 +586,23 @@ if tab_sel == "🧪 Matières Premières":
                          orientation='h', text_auto=True, color_discrete_sequence=px.colors.qualitative.Prism)
             fig.update_layout(height=450)
             st.plotly_chart(fig, use_container_width=True, key="mp_flop10")
-
         st.subheader("📋 Articles avec Stock Nul")
-        zero = mp[mp['Stock Final'] == 0][['Catégorie', 'Article', 'Code', 'UM']].copy()
-        if len(zero) > 0:
-            by_cat_zero = zero.groupby('Catégorie').size().reset_index(name='Nb Articles à 0')
+        zero_mp = mp[mp['Stock Final'] == 0][['Catégorie', 'Article', 'Code', 'UM']].copy()
+        if len(zero_mp) > 0:
+            by_cat_zero = zero_mp.groupby('Catégorie').size().reset_index(name='Nb Articles à 0')
             c1, c2 = st.columns([1, 2])
             c1.dataframe(by_cat_zero, use_container_width=True, hide_index=True)
-            c2.dataframe(zero, use_container_width=True, hide_index=True)
+            c2.dataframe(zero_mp, use_container_width=True, hide_index=True)
         else:
             st.success("Aucun article à stock nul")
-
     with sub_tab3:
         st.subheader("⛔ Analyse des Shortages")
-
         sh = mp[mp['Shortage'] > 0][['Catégorie', 'Article', 'Code', 'UM', 'Stock Initial', 'Entrées', 'Sorties', 'Stock Final', 'Shortage']].copy()
         sh = sh.sort_values('Shortage', ascending=False)
-
         k1, k2, k3 = st.columns(3)
         k1.metric("Articles en Shortage", len(sh))
         k2.metric("Total Shortage", f"{sh['Shortage'].sum():,}")
         k3.metric("Stock Restant", f"{sh['Stock Final'].sum():,}")
-
         c1, c2 = st.columns(2)
         with c1:
             sh_cat = sh.groupby('Catégorie', as_index=False)['Shortage'].sum()
@@ -627,20 +615,16 @@ if tab_sel == "🧪 Matières Premières":
                          orientation='h', text_auto=True, color_continuous_scale='Reds')
             fig.update_layout(height=350)
             st.plotly_chart(fig, use_container_width=True, key="mp_short_top")
-
         with st.expander("Voir tous les shortages"):
             st.dataframe(sh, use_container_width=True, hide_index=True)
-
     with sub_tab4:
         st.subheader("📈 Analyse des Mouvements")
-
         mouvement = mp.groupby('Catégorie', as_index=False).agg(
             Stock_Initial=('Stock Initial', 'sum'),
             Entrées=('Entrées', 'sum'),
             Sorties=('Sorties', 'sum'),
             Stock_Final=('Stock Final', 'sum')
         ).sort_values('Stock_Final', ascending=False)
-
         fig = go.Figure()
         fig.add_trace(go.Bar(name='Stock Initial', x=mouvement['Catégorie'], y=mouvement['Stock_Initial']))
         fig.add_trace(go.Bar(name='Entrées', x=mouvement['Catégorie'], y=mouvement['Entrées']))
@@ -648,7 +632,6 @@ if tab_sel == "🧪 Matières Premières":
         fig.add_trace(go.Bar(name='Stock Final', x=mouvement['Catégorie'], y=mouvement['Stock_Final']))
         fig.update_layout(barmode='group', height=450)
         st.plotly_chart(fig, use_container_width=True, key="mp_mouvement")
-
         c1, c2 = st.columns(2)
         with c1:
             st.subheader("Top 10 Entrées")
@@ -666,7 +649,6 @@ if tab_sel == "🧪 Matières Premières":
                          text_auto=True, color='Sorties', color_continuous_scale='Reds')
             fig.update_layout(height=350)
             st.plotly_chart(fig, use_container_width=True, key="mp_top_out")
-
         st.subheader("📊 Consommation Nette par Catégorie")
         conso = mp.groupby('Catégorie', as_index=False).agg(
             Stock_Initial=('Stock Initial', 'sum'),
@@ -678,10 +660,8 @@ if tab_sel == "🧪 Matières Premières":
         conso['Écart'] = conso['Consommation'] - conso['Stock_Final']
         conso = conso.sort_values('Écart', ascending=False)
         st.dataframe(conso, use_container_width=True, hide_index=True)
-
     with sub_tab5:
         st.subheader("📄 Rapport Complet - Export")
-
         rapport = mp.groupby(['Catégorie', 'Article', 'Code', 'UM'], as_index=False).agg(
             Stock_Initial=('Stock Initial', 'sum'),
             Entrées=('Entrées', 'sum'),
@@ -689,19 +669,15 @@ if tab_sel == "🧪 Matières Premières":
             Stock_Final=('Stock Final', 'sum'),
             Shortage=('Shortage', 'sum')
         ).sort_values(['Catégorie', 'Article'])
-
         col1, col2 = st.columns(2)
         with col1:
             st.metric("Total Lignes", len(rapport))
         with col2:
             st.metric("Valeur Stock Final", f"{rapport['Stock_Final'].sum():,}")
-
         st.dataframe(rapport, use_container_width=True, hide_index=True)
-
         csv_full = rapport.to_csv(sep=';', index=False, encoding='utf-8-sig')
         st.download_button("📥 Télécharger le Rapport Complet CSV",
                           data=csv_full, file_name="rapport_matieres_premieres.csv", mime="text/csv")
-
         st.divider()
         st.subheader("📊 Résumé Exécutif")
         total_init = mp['Stock Initial'].sum()
@@ -709,11 +685,10 @@ if tab_sel == "🧪 Matières Premières":
         total_out = mp['Sorties'].sum()
         total_final = mp['Stock Final'].sum()
         total_sh = mp['Shortage'].sum()
-
         resume = pd.DataFrame({
             'Indicateur': ['Stock Initial Total', 'Total Entrées', 'Total Sorties',
                           'Stock Final Total', 'Shortage Total',
-                          'Taux d\'écoulement (Sorties/Disponible)'],
+                          "Taux d'écoulement (Sorties/Disponible)"],
             'Valeur': [f"{total_init:,}", f"{total_in:,}", f"{total_out:,}",
                       f"{total_final:,}", f"{total_sh:,}",
                       f"{total_out/(total_init+total_in)*100:.1f}%" if (total_init+total_in) > 0 else "N/A"]
@@ -721,81 +696,18 @@ if tab_sel == "🧪 Matières Premières":
         st.dataframe(resume, use_container_width=True, hide_index=True)
 
 # -------- TAB 5 : SAISIE MP --------
-MP_KIT_CSV = os.path.join(BASE_DIR, "kit+mtp.csv")
-MP_SAISIE_CSV = os.path.join(BASE_DIR, "saisie_mp.csv")
-
-@st.cache_data
-def load_mp_kit():
-    k = pd.read_csv(MP_KIT_CSV, sep=';', encoding='utf-8-sig', low_memory=False)
-    k = k.iloc[:, :9].copy()
-    k.columns = k.columns.str.strip()
-    for col in k.select_dtypes('object').columns:
-        k[col] = k[col].astype(str).str.strip().replace('nan', '')
-    for col in ['Stock initial', 'Réceptions', 'Production', 'Stock Final', 'SHORTAGE']:
-        if col in k.columns:
-            k[col] = k[col].astype(str).str.replace(' ', '', regex=False).str.replace('-', '0', regex=False)
-            k[col] = pd.to_numeric(k[col], errors='coerce').fillna(0).astype(int)
-    return k
-
-def load_saisie_mp():
-    if os.path.exists(MP_SAISIE_CSV):
-        s = pd.read_csv(MP_SAISIE_CSV, sep=';', encoding='utf-8-sig')
-    else:
-        s = pd.DataFrame(columns=["Date", "Désignation", "Référence", "code article", "UM",
-                                   "Stock initial", "Réceptions", "Production", "Stock Final", "SHORTAGE"])
-    return s
-
-def save_saisie_mp(df_s):
-    df_s.to_csv(MP_SAISIE_CSV, sep=';', index=False, encoding='utf-8-sig')
-
-def update_stock_in_csv(ref, add_receptions, add_production):
-    try:
-        df = pd.read_csv(MP_KIT_CSV, sep=';', encoding='utf-8-sig', low_memory=False)
-        df.columns = df.columns.str.strip()
-        
-        for col in ['Stock initial', 'Réceptions', 'Production', 'Stock Final']:
-            if col in df.columns:
-                df[col] = df[col].astype(str).str.replace(' ', '', regex=False).str.replace('-', '0', regex=False)
-                df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
-        
-        mask = df['Référence'].astype(str).str.strip() == ref
-        if mask.any():
-            current_row = df.loc[mask].iloc[0]
-            stock_init = int(current_row['Stock initial'])
-            current_receptions = int(current_row['Réceptions'])
-            current_production = int(current_row['Production'])
-            
-            new_receptions = current_receptions + add_receptions
-            new_production = current_production + add_production
-            new_stock_final = stock_init + new_receptions - new_production
-            
-            df.loc[mask, 'Réceptions'] = new_receptions
-            df.loc[mask, 'Production'] = new_production
-            df.loc[mask, 'Stock Final'] = new_stock_final
-            
-            df.to_csv(MP_KIT_CSV, sep=';', index=False, encoding='utf-8-sig')
-            return new_stock_final
-        return None
-    except Exception as e:
-        st.error(f"Erreur mise à jour stock: {e}")
-        return None
-
 if tab_sel == "📝 Saisie MP":
     if not show_saisie:
         st.warning("🔒 Accès restreint. Entrez le mot de passe dans la barre latérale.")
     else:
         st.title("📝 Matières Premières - Formulaire de Saisie")
-
         mp_kit = load_mp_kit()
         df_mp_saisie = load_saisie_mp()
-        
         st.caption(f"Fichier : {MP_KIT_CSV}")
-
         cats = sorted(mp_kit['Désignation'].unique())
         form_cat = st.selectbox("Désignation", cats, key="form_des")
         refs_cat = sorted(mp_kit[mp_kit['Désignation'] == form_cat]['Référence'].unique())
         form_ref = st.selectbox("Référence", [""] + refs_cat, key="form_ref")
-
         if form_ref:
             match = mp_kit[(mp_kit['Désignation'] == form_cat) & (mp_kit['Référence'] == form_ref)]
             if not match.empty:
@@ -811,52 +723,43 @@ if tab_sel == "📝 Saisie MP":
             stk_init_val = 0
             rec_exist = 0
             prod_exist = 0
-
         c1, c2 = st.columns(2)
         c1.text_input("Code Article", value=code_val, disabled=True)
         c2.text_input("UM", value=um_val, disabled=True)
-
         saisie_date = st.date_input("Date", value=datetime.date.today())
         sc1, sc2, sc3 = st.columns(3)
         stk_init = sc1.number_input("Stock initial", min_value=0, value=stk_init_val, step=1)
         receptions = sc2.number_input("Réceptions", min_value=0, value=0, step=1)
         production = sc3.number_input("Production", min_value=0, value=0, step=1)
-
         stk_final = stk_init_val + rec_exist + receptions - prod_exist - production
         st.metric("Stock Final après mise à jour", f"{stk_final:,}")
-
         if 'mp_msg' in st.session_state:
             st.success(st.session_state['mp_msg'])
             del st.session_state['mp_msg']
-
         if st.button("📤 Envoyer", type="primary", use_container_width=True):
-                if not form_ref:
-                    st.error("❌ Veuillez sélectionner une Référence.")
+            if not form_ref:
+                st.error("❌ Veuillez sélectionner une Référence.")
+            else:
+                new_row = pd.DataFrame([[
+                    str(saisie_date), form_cat, form_ref, code_val, um_val,
+                    stk_init_val, receptions, production, stk_init_val + receptions - production, 0
+                ]], columns=df_mp_saisie.columns)
+                df_mp_saisie = pd.concat([df_mp_saisie, new_row], ignore_index=True)
+                save_saisie_mp(df_mp_saisie)
+                new_stock = update_stock_in_csv(form_ref, receptions, production)
+                if new_stock is not None:
+                    st.session_state['mp_msg'] = f"✅ Stock mis à jour : {form_ref}\nStock Final = {new_stock:,}"
+                    st.cache_data.clear()
+                    st.rerun()
                 else:
-                    new_row = pd.DataFrame([[
-                        str(saisie_date), form_cat, form_ref, code_val, um_val,
-                        stk_init_val, receptions, production, stk_init_val + receptions - production, 0
-                    ]], columns=df_mp_saisie.columns)
-                    df_mp_saisie = pd.concat([df_mp_saisie, new_row], ignore_index=True)
-                    save_saisie_mp(df_mp_saisie)
-                    
-                    new_stock = update_stock_in_csv(form_ref, receptions, production)
-                    if new_stock is not None:
-                        st.session_state['mp_msg'] = f"✅ Stock mis à jour : {form_ref}\nStock Final = {new_stock:,} (Entrées: +{receptions}, Sorties: -{production})"
-                        st.cache_data.clear()
-                        st.rerun()
-                    else:
-                        st.error(f"❌ Article introuvable: {form_ref}")
-
+                    st.error(f"❌ Article introuvable: {form_ref}")
         st.divider()
-
         st.subheader("📋 Dernières saisies MP")
         if len(df_mp_saisie) > 0:
             dern = df_mp_saisie.tail(20).reset_index(drop=True)
             st.dataframe(dern[::-1], use_container_width=True, hide_index=True)
             st.caption(f"Total : {len(df_mp_saisie)} saisies")
             if is_admin:
-                st.markdown("---")
                 c_edit, c_del = st.columns(2)
                 with c_edit:
                     st.markdown("##### ✏️ Modifier (Admin)")
@@ -894,7 +797,6 @@ if tab_sel == "📝 Saisie MP":
                         st.rerun()
         else:
             st.info("Aucune saisie pour le moment")
-
         col_e1, col_e2 = st.columns(2)
         with col_e1:
             csv_export = df_mp_saisie.to_csv(sep=';', index=False, encoding='utf-8-sig')
