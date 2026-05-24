@@ -19,7 +19,7 @@ PACK AID EL ADHA 4 (RT49S+RT59W);PACK AID EL ADHA 4 (RT49S+RT59W);0;0;0;0
 PACK AID EL ADHA 5ARTICLES (3RT49S+2RT59S);PACK AID EL ADHA 5ARTICLES (3RT49S+2RT59S);0;0;0;0
 PACK BIG SIZE SERIE 7;PACK BIG SIZE SERIE 7;0;0;0;0
 PACK BIG SIZE SERIE 8;PACK BIG SIZE SERIE 8;0;0;0;0
-PACK COUPE D'EUROPE "DISTY" JUIN 2024;PACK COUPE D'EUROPE "DISTY" JUIN 2024;0;0;0;0
+"PACK COUPE D'EUROPE ""DISTY"" JUIN 2024";"PACK COUPE D'EUROPE ""DISTY"" JUIN 2024";0;0;0;0
 PACK COUPE D'EUROPE JUIN 2024;PACK COUPE D'EUROPE JUIN 2024;0;0;0;0
 PACK COUPE D'EUROPE JUIN 2024;PACK COUPE D'EUROPE JUIN 2024;0;0;0;0
 PACK COUPE D'EUROPE JUIN 2024 (ORAN);PACK COUPE D'EUROPE JUIN 2024 (ORAN);0;0;0;0
@@ -136,42 +136,42 @@ RR39M7310S10;RR39M7310S9 Réfrigérateur Samsung Une Porte 375L Inox Samsung;0;0
 RRR;Rabais remises ristournes;0;0;0;0
 RS68A8820B1;Réfrigérateur 2 Portes Side By Side 609L Noir;0;0;0;0
 RS68A8820SL;RS68A8820SL Réfrigérateur Samsung 2 Portes Side By Side 609L Inox ;0;0;0;0
-RT40K5012S8;RT40K5012S8 Réfrigérateur Samsung 2 portes 400L A+ Inox ;30;28;270;84
-RT49K5012WW;RT49K5012WW Réfrigérateur Samsung 2 portes 490L A+ Blanc ;0;1;15;5
-RT49K5532S8;RT49K5532S8 Refrigerateur Samsung 2 portes 490L A+ Inox ;19;34;128;87
-RT59K6231S8;RT59K6231S8 Réfrigérateur Samsung 2 portes 590L A+ Inox ;39;2;239;41
-RT59K6231WW;RT59K6231WW Réfrigérateur Samsung 2 portes 590L A+ Blanc;49;30;354;53
+RT40K5012S8;RT40K5012S8 Réfrigérateur Samsung 2 portes 400L A+ Inox ;26;27;260;77
+RT49K5012WW;RT49K5012WW Réfrigérateur Samsung 2 portes 490L A+ Blanc ;0;1;1;2
+RT49K5532S8;RT49K5532S8 Refrigerateur Samsung 2 portes 490L A+ Inox ;54;33;45;75
+RT59K6231S8;RT59K6231S8 Réfrigérateur Samsung 2 portes 590L A+ Inox ;19;2;74;39
+RT59K6231WW;RT59K6231WW Réfrigérateur Samsung 2 portes 590L A+ Blanc;49;30;354;52
 RZ32M7110S10;RZ32M7110S9 Congélateur Une porte 315L Inox;0;0;0;0
 UA32N5000AS;UA32N5000AS Téléviseur Samsung 32'' LED Serie 5;0;3;5;2
 UA32T5300AU;UA32T5300AU Téléviseur Samsung 32'' LED SMART Serie 5;0;0;0;0
-UA43N5000AS;UA43N5000AS Téléviseur Samsung LED 43" HD S5 No SMART;0;0;6;2
-UA43T5300AU;UA43T5300AU Téléviseur Samsung 43'' LED SMART Serie 5;5;1;18;2
-UA50AU7000U;UA50AU7000U Téléviseur Samsung LED 50" UHD S7 SMART ;0;0;2;0
-UA50CU7000U;UA50CU7000U Téléviseur Samsung LED 50" UHD S7 SMART ;0;0;4;3
-UA55AU7000U;UA55AU7000U Téléviseur Samsung LED 55" UHD S7 SMART ;0;1;0;0
-UA55BU8000U;UA55BU8000U Téléviseur Samsung LED 55" UHD S8 SMART ;0;0;0;0
-UA55CU7000U;UA55CU7000U Téléviseur Samsung LED 55" UHD S7 SMART;0;0;2;4
-UA55CU8000U;UA55CU8000U Téléviseur Samsung LED 55" UHD S8 SMART;0;0;0;4
-UA58AU7000U;UA58AU7000U Téléviseur Samsung LED 58" UHD S7 SMART;0;0;0;0
-UA58CU7000U;UA58CU7000U Téléviseur Samsung LED 58" UHD S7 SMART;0;0;9;3
-UA65AU7000U;UA65AU7000U Téléviseur Samsung LED 65" UHD S7 SMART;0;0;0;0
-UA65BU8000U;UA65BU8000U Téléviseur Samsung LED 65" UHD S8 SMART;0;0;0;0
-UA65CU7000U;UA65CU7000U Téléviseur Samsung LED 65" UHD S7 SMART;0;0;6;1
-UA65CU8000U;UA65CU8000U Téléviseur Samsung LED 65" UHD S8 SMART;0;0;0;0
-UA75CU7000U;UA75CU7000U Téléviseur Samsung LED 75" UHD S7 SMART;0;0;0;0
+UA43N5000AS;"UA43N5000AS Téléviseur Samsung LED 43"" HD S5 No SMART";0;0;6;2
+UA43T5300AU;UA43T5300AU Téléviseur Samsung 43'' LED SMART Serie 5;5;1;17;2
+UA50AU7000U;"UA50AU7000U Téléviseur Samsung LED 50"" UHD S7 SMART ";0;0;2;0
+UA50CU7000U;"UA50CU7000U Téléviseur Samsung LED 50"" UHD S7 SMART ";0;0;4;3
+UA55AU7000U;"UA55AU7000U Téléviseur Samsung LED 55"" UHD S7 SMART ";0;1;0;0
+UA55BU8000U;"UA55BU8000U Téléviseur Samsung LED 55"" UHD S8 SMART ";0;0;0;0
+UA55CU7000U;"UA55CU7000U Téléviseur Samsung LED 55"" UHD S7 SMART";0;0;2;4
+UA55CU8000U;"UA55CU8000U Téléviseur Samsung LED 55"" UHD S8 SMART";0;0;0;4
+UA58AU7000U;"UA58AU7000U Téléviseur Samsung LED 58"" UHD S7 SMART";0;0;0;0
+UA58CU7000U;"UA58CU7000U Téléviseur Samsung LED 58"" UHD S7 SMART";0;0;9;3
+UA65AU7000U;"UA65AU7000U Téléviseur Samsung LED 65"" UHD S7 SMART";0;0;0;0
+UA65BU8000U;"UA65BU8000U Téléviseur Samsung LED 65"" UHD S8 SMART";0;0;0;0
+UA65CU7000U;"UA65CU7000U Téléviseur Samsung LED 65"" UHD S7 SMART";0;0;6;1
+UA65CU8000U;"UA65CU8000U Téléviseur Samsung LED 65"" UHD S8 SMART";0;0;0;0
+UA75CU7000U;"UA75CU7000U Téléviseur Samsung LED 75"" UHD S7 SMART";0;0;0;0
 VC18M2120SB;VC18M2120SB Aspirateur Samsung cylindrique 1800W Bleu ;0;-1;0;0
-WA70H4200SW;WA70H4200SW Lave-Linge Samsung Top 7 Kg 700 Tr Blanc ;146;10;148;121
-WA70H4200SY;WA70H4200SY Lave-Linge SamsungTop 7 Kg 700 Tr Gris;140;25;162;97
+WA70H4200SW;WA70H4200SW Lave-Linge Samsung Top 7 Kg 700 Tr Blanc ;145;10;148;121
+WA70H4200SY;WA70H4200SY Lave-Linge SamsungTop 7 Kg 700 Tr Gris;133;25;147;97
 WA90T5260BY;WA90T5260BY Lave-Linge Samsung Top 9 Kg 700 Tr Gris ;0;0;0;1
 WD10T654DBN;WD10T654DBN Lave-Linge Samsung Front 10,5 Kg+7 add wash séchante 1400 Tr Inox ;0;0;0;0
 WW10T554DAN;WW10T554DAN Lave-Linge Samsung Front 10 Kg 1400 Tr INOX Addwash ;0;0;0;0
 WW11B1A046ABFH;WW11B1A046ABFH Lave-Linge Samsung Front 11 Kg 1400 Tr Noir ;0;0;0;0
-WW70T4020CX;WW70T4020CX Lave-Linge Samsung Front 7 Kg 1200 Tr Inox ;77;10;61;82
+WW70T4020CX;WW70T4020CX Lave-Linge Samsung Front 7 Kg 1200 Tr Inox ;74;9;51;81
 WW70T4020EE;WW70T4020EE Lave-Linge Samsung Front 7 Kg 1200 Tr Blanc ;19;0;14;37
 WW80T554DAN;WW80T554DAN Lave-Linge Samsung Front 8 Kg 1400 Tr Inox Addwash ;0;0;0;1
-WW80TA046AX;WW80TA046AX Lave-Linge Samsung Front 8 Kg 1400 Tr Inox ;62;19;5;91
-WW80TA046TE;WW80TA046TE Lave-Linge Samsung Front 8 Kg 1400 Tr Blanc ;100;15;169;52
-WW90T554DAN;WW90T554DAN Lave-Linge Samsung Front 9 Kg 1400 Tr Inox Addwash ;139;26;105;75
+WW80TA046AX;WW80TA046AX Lave-Linge Samsung Front 8 Kg 1400 Tr Inox ;58;19;0;90
+WW80TA046TE;WW80TA046TE Lave-Linge Samsung Front 8 Kg 1400 Tr Blanc ;99;15;169;52
+WW90T554DAN;WW90T554DAN Lave-Linge Samsung Front 9 Kg 1400 Tr Inox Addwash ;135;23;45;75
 2 PIECES RT40 76%;2 PIECES RT40 76%;0;0;0;0
 2 PIECES RT49 10.28%;2 PIECES RT49 10.28%;0;0;0;0
 BIG SIZE SP-55Q725 (QA55Q80BAU);BIG SIZE SP-55Q725 (QA55Q80BAU);0;0;0;0
@@ -189,42 +189,42 @@ PACK 2 (UA50+REF+WM) 8.16%;PACK 2 (UA50+REF+WM) 8.16%;0;0;0;0
 PACK 40P UA43T + 10 UA50AU;PACK 40P UA43T + 10 UA50AU;0;0;0;0
 PACK 40P UA43T + 10 UA50CU;PACK 40P UA43T + 10 UA50CU;0;0;0;0
 PACK 43'' BIG SIZE;PACK 43'' BIG SIZE;0;0;0;0
-PACK 50" RT49 INOX;PACK 50" RT49 INOX;0;0;0;0
+"PACK 50"" RT49 INOX";"PACK 50"" RT49 INOX";0;0;0;0
 PACK 5P UA50AU7000 10%;PACK 5P UA50AU7000 10%;0;0;0;0
 PACK 5P UA50AU7000U 10%;PACK 5P UA50AU7000U 10%;0;0;0;0
 PACK 5P UA50AU7000U 10%;PACK 5P UA50AU7000U 10%;0;0;0;0
 PACK 5P UA50CU7000U 10%;PACK 5P UA50CU7000U 10%;0;0;0;0
 PACK 5P UA65CU7000U 25%;PACK 5P UA65CU7000U 25%;0;0;0;0
 PACK 75QLED +43F GIFT;PACK 75QLED +43F GIFT;0;0;0;0
-32S5400;Téléviseur TCL 32"FHD Smart  Google TV ;0;0;0;0
-43P755;Téléviseur TCL 43"UHD Smart  Google TV S 7;0;0;0;0
-43S5400;Téléviseur TCL 43"FHD Smart  Google TV ;0;0;0;0
-43S5K;Téléviseur TCL 43" FHD QLED Smart  Google TV ;565;81;1337;734
-50C655;Téléviseur TCL 50" QLED UHD 4K 120Hz  Smart Google TV Game Acc;16;9;1;0
-50P635;Téléviseur TCL 50"UHD 4K Smart  Google TV S 6;0;0;0;0
-50P755;Téléviseur TCL 50"UHD Smart Google TV S 7;125;223;551;375
-50S5K;Téléviseur TCL 50" FHD QLED Smart  Google TV ;180;98;245;0
-55C655;Téléviseur TCL 55" QLED UHD 4K 120Hz  Smart Google TV Game Acc;172;176;559;299
-55C6K;Téléviseur TCL 55" MiniLED;110;29;509;186
-55C755;Téléviseur TCL 55" QD-MIniLED 4K Smart Google TV S 7;0;0;0;0
-55P635;Téléviseur TCL 55"UHD 4K Smart Google TV S 6;0;0;0;0
-55P6K;Téléviseur TCL 55" UHD 4K Smart Google TV;338;241;748;299
-55P755;Téléviseur TCL 55"UHD Smart Google TV S 7;0;0;1;0
-55P8K;Téléviseur TCL 55" QD LED 144 Hz;0;2;1;0
-65C655;Téléviseur TCL 65" QLED UHD 4K 120Hz  Smart Google TV Game Acc;0;0;0;0
-65C6K;Téléviseur TCL 65" MiniLED;0;2;0;0
-65P635;Téléviseur TCL 65" UHD 4K Smart Google TV S 6;0;0;0;0
-65P755;Téléviseur TCL 65"UHD Smart Google TV S 7;0;0;1;0
-65P8K;Téléviseur TCL 65" QD LED 144 Hz;0;3;0;0
-75C655;Téléviseur TCL 75" QLED UHD 4K 120Hz  Smart Google TV Game Acc;0;0;0;0
-75C6K;Téléviseur TCL 75" MiniLED;4;8;39;1
-75P755;Téléviseur TCL 75"UHD Smart Google TV S 7;0;1;0;0
-75P8K;Téléviseur TCL 55" QD LED 144 Hz;9;7;0;0
-85C655;Téléviseur TCL 85" QLED UHD 4K 120Hz  Smart Google TV Game Acc;0;1;0;0
-85C6K;Téléviseur TCL 85" QD-MiniLED 4K 144 Hz Google TV Game Acc;0;0;0;0
-85P8K;Téléviseur TCL 85" QLED UHD 4K 144 Hz Smart Google TV Game Acc;0;2;1;6
-98C655;Téléviseur TCL 98" QLED UHD 4K 120Hz  Smart Google TV Game Acc;3;1;0;0
-98C6K;Téléviseur TCL 98" QD-MiniLED 4K 144 Hz Google TV  Game Acc;14;1;2;4
+32S5400;"Téléviseur TCL 32""FHD Smart  Google TV ";0;0;0;0
+43P755;"Téléviseur TCL 43""UHD Smart  Google TV S 7";0;0;0;0
+43S5400;"Téléviseur TCL 43""FHD Smart  Google TV ";0;0;0;0
+43S5K;"Téléviseur TCL 43"" FHD QLED Smart  Google TV ";553;81;1228;728
+50C655;"Téléviseur TCL 50"" QLED UHD 4K 120Hz  Smart Google TV Game Acc";16;9;1;0
+50P635;"Téléviseur TCL 50""UHD 4K Smart  Google TV S 6";0;0;0;0
+50P755;"Téléviseur TCL 50""UHD Smart Google TV S 7";125;223;549;375
+50S5K;"Téléviseur TCL 50"" FHD QLED Smart  Google TV ";180;98;157;400
+55C655;"Téléviseur TCL 55"" QLED UHD 4K 120Hz  Smart Google TV Game Acc";165;176;532;294
+55C6K;"Téléviseur TCL 55"" MiniLED";109;29;501;185
+55C755;"Téléviseur TCL 55"" QD-MIniLED 4K Smart Google TV S 7";0;0;0;0
+55P635;"Téléviseur TCL 55""UHD 4K Smart Google TV S 6";0;0;0;0
+55P6K;"Téléviseur TCL 55"" UHD 4K Smart Google TV";338;241;741;299
+55P755;"Téléviseur TCL 55""UHD Smart Google TV S 7";0;0;0;0
+55P8K;"Téléviseur TCL 55"" QD LED 144 Hz";0;2;0;0
+65C655;"Téléviseur TCL 65"" QLED UHD 4K 120Hz  Smart Google TV Game Acc";0;0;0;0
+65C6K;"Téléviseur TCL 65"" MiniLED";0;2;0;0
+65P635;"Téléviseur TCL 65"" UHD 4K Smart Google TV S 6";0;0;0;0
+65P755;"Téléviseur TCL 65""UHD Smart Google TV S 7";0;0;0;0
+65P8K;"Téléviseur TCL 65"" QD LED 144 Hz";0;3;0;0
+75C655;"Téléviseur TCL 75"" QLED UHD 4K 120Hz  Smart Google TV Game Acc";0;0;0;0
+75C6K;"Téléviseur TCL 75"" MiniLED";4;8;34;1
+75P755;"Téléviseur TCL 75""UHD Smart Google TV S 7";0;0;0;0
+75P8K;"Téléviseur TCL 55"" QD LED 144 Hz";4;7;0;0
+85C655;"Téléviseur TCL 85"" QLED UHD 4K 120Hz  Smart Google TV Game Acc";0;1;0;0
+85C6K;"Téléviseur TCL 85"" QD-MiniLED 4K 144 Hz Google TV Game Acc";0;0;0;0
+85P8K;"Téléviseur TCL 85"" QLED UHD 4K 144 Hz Smart Google TV Game Acc";0;2;1;6
+98C655;"Téléviseur TCL 98"" QLED UHD 4K 120Hz  Smart Google TV Game Acc";3;1;0;0
+98C6K;"Téléviseur TCL 98"" QD-MiniLED 4K 144 Hz Google TV  Game Acc";14;1;2;2
 AR18DXFAAWK2DZ;Climatiseur Split Samsung 18 Kbtu  Wind Free;0;0;0;0
 AR18DXFAAWKYDZ;Climatiseur Split Samsung 18 Kbtu Unité UIntérieur Wind Free;4;1;2;0
 AR18DXFAAWKZDZ;Climatiseur Split Samsung 18 Kbtu Unité Extérieur Wind Free;4;1;2;0
@@ -232,48 +232,48 @@ AR18DXFZAWK2DZ;Climatiseur Split Samsung 18 Kbtu  Wind;0;0;0;0
 AR18DXFZAWKYDZ;Climatiseur Split Samsung 18 Kbtu Unité UIntérieur Wind;7;0;29;1
 AR18DXFZAWKZDZ;Climatiseur Split Samsung 18 Kbtu Unité Extérieur Wind;7;0;29;1
 AR50F12C1QH2DZ;Climatiseur Split Samsung 12 Kbtu Wind;0;0;0;0
-AR50F12C1QHYDZ;Climatiseur Split Samsung 12 Kbtu  Wind IDU;91;85;145;48
-AR50F12C1QHZDZ;Climatiseur Split Samsung 12 Kbtu  Wind ODU;91;85;145;48
+AR50F12C1QHYDZ;Climatiseur Split Samsung 12 Kbtu  Wind IDU;89;85;125;48
+AR50F12C1QHZDZ;Climatiseur Split Samsung 12 Kbtu  Wind ODU;89;85;125;48
 AR50F18C1QH2DZ;Climatiseur Split Samsung 18 Kbtu  Wind;0;0;0;0
-AR50F18C1QHYDZ;Climatiseur Split Samsung 18 Kbtu  Wind IDU;10;0;77;1
-AR50F18C1QHZDZ;Climatiseur Split Samsung 18 Kbtu  Wind ODU;10;0;77;1
+AR50F18C1QHYDZ;Climatiseur Split Samsung 18 Kbtu  Wind IDU;10;0;67;1
+AR50F18C1QHZDZ;Climatiseur Split Samsung 18 Kbtu  Wind ODU;10;0;67;1
 AR50F24C1QH2DZ;Climatiseur Split Samsung 24 Kbtu  Wind;0;0;0;0
 AR50F24C1QHYDZ;Climatiseur Split Samsung 24 Kbtu  Wind IDU;46;2;12;25
 AR50F24C1QHZDZ;Climatiseur Split Samsung 24 Kbtu  Wind ODU;46;2;12;25
 AR60F12C1TW2DZ;Climatiseur Split Samsung 12 Kbtu  WindFree;0;0;0;0
-AR60F12C1TWYDZ;Climatiseur Split Samsung 12 Kbtu  WindFree IDU;13;0;162;26
-AR60F12C1TWZDZ;Climatiseur Split Samsung 12 Kbtu  WindFree ODU;15;0;162;26
+AR60F12C1TWYDZ;Climatiseur Split Samsung 12 Kbtu  WindFree IDU;13;0;152;26
+AR60F12C1TWZDZ;Climatiseur Split Samsung 12 Kbtu  WindFree ODU;15;0;152;26
 AR60F18C1TW2DZ;Climatiseur Split Samsung 18 Kbtu  WindFree;0;0;0;0
-AR60F18C1TWYDZ;Climatiseur Split Samsung 18 Kbtu  WindFree IDU;7;1;74;1
-AR60F18C1TWZDZ;Climatiseur Split Samsung 18 Kbtu  WindFree ODU;7;1;74;1
-C2111FLB;C2111FLB Lave-Linge TCL Front 10 KG Blue;89;0;122;62
+AR60F18C1TWYDZ;Climatiseur Split Samsung 18 Kbtu  WindFree IDU;7;1;64;1
+AR60F18C1TWZDZ;Climatiseur Split Samsung 18 Kbtu  WindFree ODU;7;1;64;1
+C2111FLB;C2111FLB Lave-Linge TCL Front 10 KG Blue;88;0;73;61
 C2111WDB;C2111WDB Lave-Linge TCL Front 10 KG Blue;77;5;0;2
-C512FLG;C512FLG Lave-Linge TCL Front 12 KG Grey;5;0;2;0
+C512FLG;C512FLG Lave-Linge TCL Front 12 KG Grey;5;0;7;0
 CL-60_2In;HOTTE SKY 60CM CLASSIC CHIMNEY;68;12;15;27
 CL-90_2In;HOTTE SKY 90CM CLASSIC CHIMNEY;2;2;1;2
-DB97-17810A;Accessoires d'installation climatiseur split 9 & 12 KBTU;106;85;307;74
-DB97-17811A;Accessoires d'installation climatiseur split 18 KBTU;28;2;182;3
+DB97-17810A;Accessoires d'installation climatiseur split 9 & 12 KBTU;104;85;277;74
+DB97-17811A;Accessoires d'installation climatiseur split 18 KBTU;28;2;162;3
 DB97-17812A;Accessoires d'installation climatiseur split 24 KBTU;46;2;12;25
 MS23DG4504ATDZ;Four Micro-Ondes Samsung 23L dark grey;0;0;0;0
 MS32DG4504ATDZ;Four Micro-Ondes Samsung 32L dark grey;0;0;0;0
 P409BFN;P409BFN Refregirateur TCL Combi  409 L Inox  (A+);21;21;23;8
 P480TMN;TCL P480TMN;0;0;10;13
-P540BFN;P540BFN Refregirateur TCL Combi  540 L Inox  (A+);70;61;38;42
+P540BFN;P540BFN Refregirateur TCL Combi  540 L Inox  (A+);70;61;24;42
 P560CDS;TCL P560CDS;0;0;1;0
-P605TMN;P605TM Refregirateur TCL double portes  605 L Inox  (A+);69;14;38;38
-P612FLG;P612FLG Lave-Linge TCL Front 12 KG Grey;126;42;53;50
+P605TMN;P605TM Refregirateur TCL double portes  605 L Inox  (A+);68;14;34;38
+P612FLG;P612FLG Lave-Linge TCL Front 12 KG Grey;126;42;46;50
 P620CDS;P620CDS Refregirateur TCL 4 Portes Cross Door 620 L  Inox  (A+);0;0;0;0
-P635SBNS;TCL P635SBNS;109;4;91;96
+P635SBNS;TCL P635SBNS;108;4;88;95
 P700TMN;TCL P700TMN;0;0;1;0
 P787TMN;P787TMN Refregirateur TCL double portes  787 L Inox  (A+);0;0;0;0
 P790SBNS;P790SBNS Refregirateur TCL Side by Side 790 L Inox , Twin Eco Inverter (A+);17;14;63;23
-QA55Q70DAU;Televiseur Samsung 55'' QLED 4K Serie7;57;3;149;18
+QA55Q70DAU;Televiseur Samsung 55'' QLED 4K Serie7;56;3;149;18
 QA55Q7FAAU;Téléviseur Samsung 55'' QLED 4K Serie 7;8;0;25;6
 QA55Q80DAU;Televiseur Samsung 55'' QLED 4K Serie8;0;0;0;0
 QA55QN90DAU;Televiseur Samsung 55'' Neo QLED 4K Serie 9;4;1;13;1
 QA55QN90FAU;Televiseur Samsung 55'' Neo QLED Serie 9 ;0;0;0;2
 QA55S85FAE;Téléviseur Samsung 55 OLED Serie 8 ;10;2;54;6
-QA65Q70DAU;Televiseur Samsung 65'' QLED 4K Serie 7;14;3;69;50
+QA65Q70DAU;Televiseur Samsung 65'' QLED 4K Serie 7;10;3;69;50
 QA65Q7FAAU;Téléviseur Samsung 65'' QLED 4K Serie 7;5;0;28;4
 QA65Q80DAU;Televiseur Samsung 65'' QLED 4K Serie 8;0;0;0;0
 QA65QN90DAU;Televiseur Samsung 65'' Neo QLED 4K Serie 9;9;1;24;5
@@ -284,20 +284,20 @@ QA75QN90DAU;Televiseur Samsung 75'' Neo QLED 4K Serie 9;0;0;0;0
 QA77S85FAE;Téléviseur Samsung 77 OLED Serie 8   ;9;1;43;4
 QA85QN800DU;Televiseur Samsung 85'' Neo QLED 8K Serie 8;1;0;4;1
 QA85QN90DAU;Televiseur Samsung 85'' Neo QLED 4K Serie 9;0;0;0;0
-RT49K5532WWS3;RT49K5532WW Réfrigérateur Samsung 2 portes 490L A+ Blanc;51;3;152;84
-RT59K6231B1;RT59K6231B1 Réfrigérateur Samsung 2 portes 590L A+ Noire;48;21;40;115
-SACM-120L;SACM-120L Air Cooler;18;0;76;94
-SACM-72L;SACM-72L Air Cooler;70;8;90;64
-SACM-90L;SACM-90L Air Cooler;65;7;64;74
-SACM-90LB;SACM-90LB Air Cooler;15;0;41;0
+RT49K5532WWS3;RT49K5532WW Réfrigérateur Samsung 2 portes 490L A+ Blanc;51;3;150;84
+RT59K6231B1;RT59K6231B1 Réfrigérateur Samsung 2 portes 590L A+ Noire;45;20;34;112
+SACM-120L;SACM-120L Air Cooler;18;0;66;94
+SACM-72L;SACM-72L Air Cooler;70;8;85;64
+SACM-90L;SACM-90L Air Cooler;65;7;59;74
+SACM-90LB;SACM-90LB Air Cooler;15;0;36;0
 SBL1200S;Blender SKY 1200 W - 6 Vitesses - 20000 tr/min - Noir;133;24;205;59
-SBL1203S;Blender SKY 1200 W - 6 Vitesses -3 prog - 20000 tr/min - Noir;60;21;140;60
-SBM60B;Bras-mixeur SKY 600W - Acier inoxydable - Noir;133;39;119;105
-SBM60S;Bras-mixeur SKY 600W - Acier inoxydable;117;7;33;0
+SBL1203S;Blender SKY 1200 W - 6 Vitesses -3 prog - 20000 tr/min - Noir;60;20;140;60
+SBM60B;Bras-mixeur SKY 600W - Acier inoxydable - Noir;133;39;109;105
+SBM60S;Bras-mixeur SKY 600W - Acier inoxydable;117;7;23;0
 SBM804B;Bras-mixeur SKY 800W - Acier inoxydable - 04 lames - Noir;57;5;0;24
-SBMH1258B;Bras Mixeur 3 en 1 SKY 1200W Hachoir - Fouet - Noir;28;1;72;74
-SBT403S;Batteur SKY 400 W - 5 Vitesses - turbo multifonction - Silver;81;9;99;52
-SBT552B;Batteur SKY 550W - 5 Vitesse - Noir;139;48;184;102
+SBMH1258B;Bras Mixeur 3 en 1 SKY 1200W Hachoir - Fouet - Noir;28;1;62;74
+SBT403S;Batteur SKY 400 W - 5 Vitesses - turbo multifonction - Silver;81;9;89;52
+SBT552B;Batteur SKY 550W - 5 Vitesse - Noir;139;48;173;102
 SBT552G;Batteur SKY 550W - 5 Vitesse - Gris ;0;0;0;0
 SBTP40S;Batteur patissier SKY 400W - 5 Vitesse - Silver;21;6;78;24
 SF60-E2DVCGB;Four Encastrable SKY Elec  60 Cm  Ventilé  Glass Noir;31;8;58;5
@@ -313,7 +313,7 @@ SH60-P1X;Hotte SKY 60cm pyramide Inox;76;4;133;2
 SH60-TT3X;Hotte SKY 60cm T Tactil Inox;10;7;46;2
 SH90-DT4GB;Hotte SKY 90cm decorative tactil Glass Noir;30;4;39;0
 SK-WM123TBA;Lave-Linge SKY TWIN 12Kg Semi-Auto, 3B, Pompe, Bleu Aegean ;0;27;0;0
-SK-WM123TDB;SK-WM123TDB Lave-Linge TWIN TUB 3 KNOB DARK BLUE ;0;36;0;9
+SK-WM123TDB;SK-WM123TDB Lave-Linge TWIN TUB 3 KNOB DARK BLUE ;0;36;0;0
 SK-WM123TFG;Lave-Linge SKY TWIN 12Kg Semi-Auto, 3B, Pompe, Gris ;0;28;0;0
 SK-WM123TG;SK-WM123TG Lave-Linge TWIN TUB 3 KNOB GREEN;0;0;0;0
 SK-WM123TN;SK-WM123TN Lave-Linge TWIN TUB 3 KNOB BLACK ;0;0;0;0
@@ -322,30 +322,30 @@ SK-WM124TBA;Lave-Linge SKY TWIN 12Kg Semi-Auto, 4B, Pompe, Bleu Aegean;0;0;0;0
 SK-WM124TDB;SK-WM124TDB Lave-Linge TWIN TUB 4 KNOB DARK BLUE ;21;0;0;0
 SK-WM124TFG;Lave-Linge SKY TWIN 12Kg Semi-Auto, 4B, Pompe, Gris ;24;0;0;0
 SK-WM124TG;SK-WM124TG Lave-Linge TWIN TUB 4 KNOB GREEN;0;0;0;0
-SK-WM124TN;SK-WM124TN Lave-Linge TWIN TUB 4 KNOB BLACK ;0;0;35;0
+SK-WM124TN;SK-WM124TN Lave-Linge TWIN TUB 4 KNOB BLACK ;0;0;33;0
 SK-WM124TTI;Lave-Linge SKY TWIN 12Kg Semi-Auto, 4B, Pompe, Transparent inox ;0;0;0;0
-SKY CF270GC;Congélateur horizontal SKY 270  - Porte coulissante en verre - Gris;0;10;0;14
+SKY CF270GC;Congélateur horizontal SKY 270  - Porte coulissante en verre - Gris;0;10;0;10
 SKY CF270S;SKY CF270S Chest freezer ;2;6;0;0
 SKY CF270W;SKY CF270W Chest freezer ;14;4;19;51
-SKY CF270WC;Congélateur horizontal SKY 270  - Porte coulissante en verre - Blanc;23;8;65;77
-SKY CF330GC;Congélateur horizontal SKY 330  - Porte coulissante en verre - Gris;42;21;65;8
-SKY CF330WC;Congélateur horizontal SKY 330  - Porte coulissante en verre - Blanc;66;38;245;135
-SKY CF400GC;Congélateur horizontal SKY 400  - Porte coulissante en verre - Gris;40;21;0;45
+SKY CF270WC;Congélateur horizontal SKY 270  - Porte coulissante en verre - Blanc;16;8;28;77
+SKY CF330GC;Congélateur horizontal SKY 330  - Porte coulissante en verre - Gris;37;21;84;8
+SKY CF330WC;Congélateur horizontal SKY 330  - Porte coulissante en verre - Blanc;61;38;223;135
+SKY CF400GC;Congélateur horizontal SKY 400  - Porte coulissante en verre - Gris;33;21;60;45
 SKY CF400S;SKY CF400S Chest freezer ;0;9;0;0
 SKY CF400W;SKY CF400W Chest freezer ;28;9;55;0
-SKY CF400WC;Congélateur horizontal SKY 400  - Porte coulissante en verre - Blanc;51;22;128;56
+SKY CF400WC;Congélateur horizontal SKY 400  - Porte coulissante en verre - Blanc;46;22;114;56
 SLV13-62ADB;Lave-vaisselle SKY13 Couverts 06 Programmes- auto open door Black;32;7;3;25
 SLV13-62ADS;Lave-vaisselle SKY13 Couverts 06 Programmes- auto open door Silver;32;8;8;25
 SLV13-62ADX;Lave-vaisselle SKY13 Couverts 06 Programmes- auto open door Inox;34;22;131;20
-SMC1303TB;Machine à Café SKY 20bar-1350W Tactil 3 fonctions - Noir;15;1;12;27
+SMC1303TB;Machine à Café SKY 20bar-1350W Tactil 3 fonctions - Noir;13;1;4;27
 SMWM259DS;Four Micro-Ondes Sky 25L Silver avec Grill;4;1;0;0
 SMWM259DX;Four Micro-Ondes Sky 25L INOX Encasrable Avec Grill;2;3;0;3
 SMWM259TBG;Four Micro-Ondes Sky 25L Noire Encastrable avec Grill;0;0;0;6
-SMWM309DB;Four Micro-Ondes Sky 30L Noir Avec Grill;36;11;47;0
-SMWS207NB;Four Micro-Ondes Sky 20L Noire;76;28;625;103
-SMWS207NW;Four Micro-Ondes Sky 20L Blanc;45;6;67;59
-SPTM1510B;Pétrin Multi-fonctions SKY 1500W - 10 L - 8 vitesses - Noir;109;17;140;42
-SPTM1510R;Pétrin Multi-fonctions SKY 1500W - 10 L - 8 vitesses - Rouge;111;17;203;63
+SMWM309DB;Four Micro-Ondes Sky 30L Noir Avec Grill;36;11;42;0
+SMWS207NB;Four Micro-Ondes Sky 20L Noire;76;28;615;103
+SMWS207NW;Four Micro-Ondes Sky 20L Blanc;45;6;57;59
+SPTM1510B;Pétrin Multi-fonctions SKY 1500W - 10 L - 8 vitesses - Noir;109;17;135;42
+SPTM1510R;Pétrin Multi-fonctions SKY 1500W - 10 L - 8 vitesses - Rouge;111;17;202;63
 SPTM1510S;Pétrin Multi-fonctions SKY 1500W - 10 L - 8 vitesses - Silver;0;0;0;0
 SPTN1207BX;Pétrin Mono-fonction SKY 1200W - 7 L - 8 vitesses - Inox Noir;91;15;92;94
 SPTN605B;Pétrin Mono-fonction SKY 600W - 5,3 L - 6 vitesses - Noir ;98;16;218;45
@@ -355,7 +355,7 @@ ST60-4BFS2X;Table de cuisson SKY 4 Feux FFD Fonte  60 cm - Inox;43;4;25;1
 ST60-4BSW3X;Table de cuisson SKY 4 Feux FFD WOK 60 cm - Inox;100;9;103;34
 ST60-4BSW4GB;Table de cuisson SKY 4 Feux FFD Fonte  60 cm - Glass Noir;29;3;85;0
 ST70-5BEW5X;Table de cuisson SKY 5 Feux WOK  70 cm - Inox;25;4;88;0
-ST70-5BFS6X;Table de cuisson SKY 5 Feux FFD WOK  70 cm - Inox;125;6;104;0
+ST70-5BFS6X;Table de cuisson SKY 5 Feux FFD WOK  70 cm - Inox;125;6;103;0
 ST70-5BSW7GB;Table de cuisson SKY 5 Feux FFD WOK 70 cm - Glass Noir;112;9;105;0
 TAC-09CHSA-XA73I;Climatiseur TCL Split  9000 btu Elite Inverter Tropical;0;0;0;0
 TAC-09CHSA/XA73I-INDOOR;Climatiseur TCL Split  9000 btu Elite Inverter Tropical (Mega-tropicalisé)-INDOOR;0;1;0;0
@@ -364,40 +364,40 @@ TAC-12CHSA-TPH11;Climatiseur TCL Split  12000 btu BREEZE-IN Inverter Tropical;0;
 TAC-12CHSA/TPH11-INDOOR;Climatiseur TCL Split  12000 btu BREEZE-IN Inverter Tropical INDOOR;101;19;105;154
 TAC-12CHSA/TPH11-OUTDOOR;Climatiseur TCL Split  12000 btu BREEZE-IN Inverter Tropical OUTDOOR;104;19;116;154
 TAC-12CHSA-XA73I;Climatiseur TCL Split  12000 btu Elite Inverter Tropical;0;0;0;0
-TAC-12CHSA/XA73I-INDOOR;Climatiseur TCL Split  12000 btu Elite Inverter Tropical (Mega-tropicalisé)-INDOOR;121;96;224;185
-TAC-12CHSA/XA73I-OUTDOOR;Climatiseur TCL Split  12000 btu Elite Inverter Tropical (Mega-tropicalisé)-OUTDOOR;121;96;224;185
+TAC-12CHSA/XA73I-INDOOR;Climatiseur TCL Split  12000 btu Elite Inverter Tropical (Mega-tropicalisé)-INDOOR;119;96;220;185
+TAC-12CHSA/XA73I-OUTDOOR;Climatiseur TCL Split  12000 btu Elite Inverter Tropical (Mega-tropicalisé)-OUTDOOR;119;96;220;185
 TAC-12CHSA-XAF1T;Climatiseur TCL Split  12000 btu ON/OFF T3 Tropical;0;0;0;0
-TAC-12CHSA/XAF1T-INDOOR;Climatiseur TCL Split  12000 btu ON/OFF T3 Tropical INDOOR;69;0;610;193
-TAC-12CHSA/XAF1T-OUTDOOR;Climatiseur TCL Split  12000 btu ON/OFF T3 Tropical OUTDOOR;69;0;536;193
+TAC-12CHSA/XAF1T-INDOOR;Climatiseur TCL Split  12000 btu ON/OFF T3 Tropical INDOOR;67;0;610;193
+TAC-12CHSA/XAF1T-OUTDOOR;Climatiseur TCL Split  12000 btu ON/OFF T3 Tropical OUTDOOR;67;0;536;193
 TAC-18CHSA-XA73I;Climatiseur TCL Split  18000 btu Elite Inverter Tropical;0;0;0;0
 TAC-18CHSA/XA73I-INDOOR;Climatiseur TCL Split  18000 btu Elite Inverter Tropical (Mega-tropicalisé)-INDOOR;136;0;1750;0
 TAC-18CHSA/XA73I-OUTDOOR;Climatiseur TCL Split  18000 btu Elite Inverter Tropical (Mega-tropicalisé)-OUTDOOR;136;0;876;0
 TAC-18CHSA-XAF1T;Climatiseur TCL Split  18000 btu ON/OFF T3 Tropical;0;0;0;0
-TAC-18CHSA/XAF1T-INDOOR;Climatiseur TCL Split  18000 btu ON/OFF T3 Tropical INDOOR;130;63;84;100
-TAC-18CHSA/XAF1T-OUTDOOR;Climatiseur TCL Split  18000 btu ON/OFF T3 Tropical OUTDOOR;130;63;83;100
+TAC-18CHSA/XAF1T-INDOOR;Climatiseur TCL Split  18000 btu ON/OFF T3 Tropical INDOOR;129;63;84;100
+TAC-18CHSA/XAF1T-OUTDOOR;Climatiseur TCL Split  18000 btu ON/OFF T3 Tropical OUTDOOR;129;63;83;100
 TAC-24CHSA-XA73I;Climatiseur TCL Split  24000 btu Elite Inverter Tropical;0;0;0;0
 TAC-24CHSA/XA73I-INDOOR;Climatiseur TCL Split  24000 btu Elite Inverter Tropical (Mega-tropicalisé)-INDOOR;0;0;0;0
 TAC-24CHSA/XA73I-OUTDOOR;Climatiseur TCL Split  24000 btu Elite Inverter Tropical (Mega-tropicalisé)-OUTDOOR;0;0;0;0
 TAC-24CHSA-XAF1T;Climatiseur TCL Split  24000 btu ON/OFF T3 Tropical;0;0;0;0
-TAC-24CHSA/XAF1T-INDOOR;Climatiseur TCL Split  24000 btu ON/OFF T3 Tropical INDOOR;51;10;99;28
-TAC-24CHSA/XAF1T-OUTDOOR;Climatiseur TCL Split  24000 btu ON/OFF T3 Tropical OUTDOOR;51;10;100;28
-UA43DU7000U;Televiseur Samsung 43" LED UHD S7 SMART;174;35;503;67
-UA43F6000FU;Téléviseur Samsung 43'' LED SMART Serie 6;280;33;91;342
-UA43U8000FU;TELEVISEUR SAMSUNG LED 43" UHD S8 SMART;118;60;708;119
-UA50DU7000U;Televiseur Samsung 50" LED UHD S7 SMART;306;188;547;178
-UA50U8000FU;TELEVISEUR SAMSUNG LED 50" UHD S8 SMART;0;0;0;0
-UA55DU7000U;Televiseur Samsung 55" LED UHD S7 SMART;0;1;2;6
-UA55DU8000U;Televiseur Samsung 55" LED UHD S8 SMART;0;0;0;0
-UA55U8000FU;TELEVISEUR SAMSUNG LED 55" UHD S8 SMART;15;4;10;6
-UA58U8000FU;TELEVISEUR SAMSUNG LED 58" UHD S8 SMART;29;6;165;0
-UA60DU7000U;Televiseur Samsung 60" LED UHD S7 SMART;45;0;3;0
-UA65DU7000U;Televiseur Samsung 65" LED UHD S7 SMART;44;0;0;0
-UA65DU8000U;Televiseur Samsung 65" LED UHD S8 SMART;0;0;0;0
-UA65U8000FU;TELEVISEUR SAMSUNG LED 65" UHD S8 SMART;44;21;125;9
-UA75DU7000U;Televiseur Samsung 75" LED UHD S7 SMART;54;8;84;1
-UA75U8000FU;TELEVISEUR SAMSUNG LED 75" UHD S8 SMART;0;0;0;0
-UA85DU8000U;Televiseur Samsung 85" LED UHD S8 SMART;9;3;9;4
-UA85U8000FU;TELEVISEUR SAMSUNG LED 85" UHD S8 SMART;0;0;0;0
+TAC-24CHSA/XAF1T-INDOOR;Climatiseur TCL Split  24000 btu ON/OFF T3 Tropical INDOOR;50;10;89;28
+TAC-24CHSA/XAF1T-OUTDOOR;Climatiseur TCL Split  24000 btu ON/OFF T3 Tropical OUTDOOR;50;10;90;28
+UA43DU7000U;"Televiseur Samsung 43"" LED UHD S7 SMART";174;35;500;67
+UA43F6000FU;Téléviseur Samsung 43'' LED SMART Serie 6;280;27;567;340
+UA43U8000FU;"TELEVISEUR SAMSUNG LED 43"" UHD S8 SMART";114;60;708;119
+UA50DU7000U;"Televiseur Samsung 50"" LED UHD S7 SMART";306;184;436;177
+UA50U8000FU;"TELEVISEUR SAMSUNG LED 50"" UHD S8 SMART";0;0;0;0
+UA55DU7000U;"Televiseur Samsung 55"" LED UHD S7 SMART";0;1;0;3
+UA55DU8000U;"Televiseur Samsung 55"" LED UHD S8 SMART";0;0;0;0
+UA55U8000FU;"TELEVISEUR SAMSUNG LED 55"" UHD S8 SMART";175;2;218;6
+UA58U8000FU;"TELEVISEUR SAMSUNG LED 58"" UHD S8 SMART";91;6;165;0
+UA60DU7000U;"Televiseur Samsung 60"" LED UHD S7 SMART";45;0;1;0
+UA65DU7000U;"Televiseur Samsung 65"" LED UHD S7 SMART";44;0;0;0
+UA65DU8000U;"Televiseur Samsung 65"" LED UHD S8 SMART";0;0;0;0
+UA65U8000FU;"TELEVISEUR SAMSUNG LED 65"" UHD S8 SMART";44;21;124;9
+UA75DU7000U;"Televiseur Samsung 75"" LED UHD S7 SMART";54;7;81;1
+UA75U8000FU;"TELEVISEUR SAMSUNG LED 75"" UHD S8 SMART";0;0;0;0
+UA85DU8000U;"Televiseur Samsung 85"" LED UHD S8 SMART";9;3;9;4
+UA85U8000FU;"TELEVISEUR SAMSUNG LED 85"" UHD S8 SMART";0;0;0;0
 VC18M3125XBDZ;Aspirateur Samsung Canister 1800 W Blue Cosmo;121;28;153;79
 VC18M3125XPDZ;Aspirateur Samsung Canister 1800 W Merlot Purple;70;29;296;90
 VS15A60AGX7DZ;Aspirateur Samsung Jet Stick 410 W Merlot Purple;38;8;233;69
